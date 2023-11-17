@@ -1,0 +1,87 @@
+/* Style du header et du menu de navigation */
+header {
+    background-color: #333;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    /* En-tête fixé en haut de la fenêtre */
+    left: 0;
+    width: 100%;
+    /* En-tête occupe toute la largeur de la fenêtre */
+    z-index: 100;
+}
+
+header img {
+    width: 35px;
+    height: 35px;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    font-family: Arial, sans-serif;
+    line-height: 1em;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.connection input {
+    height: 30px;
+    width: 40%;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 5px #808080;
+    border-radius: 5px;
+
+}
+
+.connection #formlogin {
+
+    width: 17%;
+}
+
+#deco {
+    margin-right: 40px;
+}
+
+.submit {
+    height: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-right: 10px;
+    width: auto;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 5px #808080;
+    border-radius: 5px;
+}
+
+@keyframes slidein {
+    from {
+        transform: translateX(90%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.welcome-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.3rem;
+}

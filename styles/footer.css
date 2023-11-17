@@ -1,0 +1,10 @@
+/* Style du footer */
+footer {
+    
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
