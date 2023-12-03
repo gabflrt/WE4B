@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "WE4B"
+  "defaultProject": "WE4B",
+  "cli": {
+    "analytics": "9f318e81-d678-4600-a3dd-f743ed39a666"
+  }
 }
