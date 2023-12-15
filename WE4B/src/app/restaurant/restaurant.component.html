@@ -19,7 +19,7 @@
 
 <p class="card-text"><small class="text-muted">Likes: {{restaurant.likes}}</small></p>
 <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-<button type="button" class="btn btn-primary btn-sm" (click)="addLike()">Like</button>
-<button type="button" class="btn btn-secondary btn-sm" (click)="removeLike()">Dislike</button>
+<button type="button" class="btn btn-primary btn-sm" [disabled]="buttonDisabled"(click)="addLike()">Like</button>
+<button type="button" class="btn btn-secondary btn-sm" [disabled]="!buttonDisabled"(click)="removeLike()">Dislike</button>
 </div>
 <br><br>

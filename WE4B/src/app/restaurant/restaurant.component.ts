@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class RestaurantComponent {
 
   @Input() restaurant!:Restaurant;
+  buttonDisabled:boolean = false;
 
   constructor(private router: Router) {
 
@@ -24,12 +25,14 @@ export class RestaurantComponent {
   addLike(){
     if (this.restaurant.likes>=0){
       this.restaurant.likes++;
+      this.buttonDisabled=true;
     }
   }
 
   removeLike(){
     if(this.restaurant.likes>0){
       this.restaurant.likes--;
+      this.buttonDisabled=false;
     }
   }
   
