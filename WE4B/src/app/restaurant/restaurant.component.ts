@@ -21,6 +21,17 @@ export class RestaurantComponent {
   readMore() {
     this.router.navigate(['/', 'restaurant', this.restaurant.restaurant_id])
 }
+  addLike(){
+    if (this.restaurant.likes>=0){
+      this.restaurant.likes++;
+    }
+  }
+
+  removeLike(){
+    if(this.restaurant.likes>0){
+      this.restaurant.likes--;
+    }
+  }
   
 
 }

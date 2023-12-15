@@ -8,6 +8,7 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { RestaurantListComponent } from './restaurant-list/restaurant-list.component';
 import { FormsModule } from '@angular/forms';
 import { RestaurantFullComponent } from './restaurant-full/restaurant-full.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RestaurantFullComponent } from './restaurant-full/restaurant-full.compo
     HeaderComponent,
     RestaurantComponent,
     RestaurantListComponent,
-    RestaurantFullComponent
+    RestaurantFullComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

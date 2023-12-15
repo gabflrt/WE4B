@@ -6,7 +6,8 @@ export class Restaurant {
     public dateOfCreation: string,
     public adress: string,
     public note: number,
-    public img: string) {
+    public img: string,
+    public likes:number) {
     this.restaurant_id = restaurant_id;
     this.description = description;
     this.title = title;
@@ -14,6 +15,7 @@ export class Restaurant {
     this.adress = adress;
     this.note = note;
     this.img = img;
+    this.likes = likes;
     }
     }
     
