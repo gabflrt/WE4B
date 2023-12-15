@@ -8,11 +8,11 @@ import { AccountComponent } from './account/account.component';
 import { OrdersComponent } from './orders/orders.component';
 
 const routes: Routes = [
-  {path:'', component: RestaurantListComponent},
-  {path:'account', component: AccountComponent},
-  {path:'orders', component: OrdersComponent},
-  {path:'restaurant/:restaurant_id', component: RestaurantFullComponent},
-  ];
+  { path: '', component: RestaurantListComponent },
+  { path: 'account', component: AccountComponent },
+  { path: 'orders', component: OrdersComponent },
+  { path: 'restaurant/:restaurant_id', component: RestaurantFullComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
