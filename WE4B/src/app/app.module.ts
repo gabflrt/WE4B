@@ -6,17 +6,25 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { RestaurantListComponent } from './restaurant-list/restaurant-list.component';
+import { FormsModule } from '@angular/forms';
+import { AccountComponent } from './account/account.component';
+import { OrdersComponent } from './orders/orders.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     RestaurantComponent,
-    RestaurantListComponent
+    RestaurantListComponent,
+    AccountComponent,
+    OrdersComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

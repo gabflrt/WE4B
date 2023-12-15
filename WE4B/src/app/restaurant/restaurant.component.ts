@@ -15,6 +15,18 @@ export class RestaurantComponent {
   }
   ngOnInit(): void {
   }
+
+  addLike(){
+    if (this.restaurant.likes>=0){
+      this.restaurant.likes++;
+    }
+  }
+
+  removeLike(){
+    if(this.restaurant.likes>0){
+      this.restaurant.likes--;
+    }
+  }
   
 
 }
