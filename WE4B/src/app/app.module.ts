@@ -9,6 +9,10 @@ import { RestaurantListComponent } from './restaurant-list/restaurant-list.compo
 import { FormsModule } from '@angular/forms';
 import { RestaurantFullComponent } from './restaurant-full/restaurant-full.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormcreacompteComponent } from './formcreacompte/formcreacompte.component';
+import { FormcrearestoComponent } from './formcrearesto/formcrearesto.component';
+import { AccountComponent } from './account/account.component';
+import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,12 @@ import { NavbarComponent } from './navbar/navbar.component';
     RestaurantComponent,
     RestaurantListComponent,
     RestaurantFullComponent,
-    NavbarComponent
+    NavbarComponent,
+    AccountComponent,
+    OrdersComponent,
+    NavbarComponent,
+    FormcreacompteComponent,
+    FormcrearestoComponent
   ],
   imports: [
     BrowserModule,
