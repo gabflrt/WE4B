@@ -9,7 +9,7 @@ export class RestaurantService {
   constructor() { }
   getData() : Restaurant {
   
-    return new Restaurant(1,"Auberge-fleurie", "Cuisine Française, Européenne", "2022-01-13", "41 rue des acacias",4.5,"./assets/img/1.jpg",1);
+    return new Restaurant(1,"Auberge-fleurie", "Cuisine Française, Européenne", "2022-01-13", "41 rue des acacias",4.5,"./assets/img/1.jpg", 1);
   
   }
   getPrdByIndex(restaurant_id: number): Restaurant {
