@@ -14,6 +14,7 @@ import { FormcrearestoComponent } from './formcrearesto/formcrearesto.component'
 import { AccountComponent } from './account/account.component';
 import { OrdersComponent } from './orders/orders.component';
 import { MesRestosComponent } from './mes-restos/mes-restos.component';
+import { FormconnexionComponent } from './formconnexion/formconnexion.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MesRestosComponent } from './mes-restos/mes-restos.component';
     NavbarComponent,
     FormcreacompteComponent,
     FormcrearestoComponent,
-    MesRestosComponent
+    MesRestosComponent,
+    FormconnexionComponent
   ],
   imports: [
     BrowserModule,
