@@ -13,6 +13,7 @@ import { FormcreacompteComponent } from './formcreacompte/formcreacompte.compone
 import { FormcrearestoComponent } from './formcrearesto/formcrearesto.component';
 import { AccountComponent } from './account/account.component';
 import { OrdersComponent } from './orders/orders.component';
+import { MesRestosComponent } from './mes-restos/mes-restos.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { OrdersComponent } from './orders/orders.component';
     OrdersComponent,
     NavbarComponent,
     FormcreacompteComponent,
-    FormcrearestoComponent
+    FormcrearestoComponent,
+    MesRestosComponent
   ],
   imports: [
     BrowserModule,

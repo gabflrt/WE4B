@@ -4,7 +4,7 @@ header {
     display: flex;
     color: #fff;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.3rem;
     position: fixed;
     top: 0;
     /* En-tête fixé en haut de la fenêtre */
@@ -30,12 +30,24 @@ ul {
     align-items: center;
 }
 
+h2 {
+
+    font-family: 'Indie Flower', cursive;
+    margin-left: 35px;
+
+}
+
+
 a {
     font-family: Arial, sans-serif;
     line-height: 1em;
     color: #fff;
     text-decoration: none;
     margin-right: 10px;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+
 }
 
 .connection input {
