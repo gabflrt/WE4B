@@ -1,3 +1,5 @@
+<br><br><br><br><br>
+<div class="row h-100 justify-content-center align-items-center">
 <div class="card" style="width: 18rem;">
     <div class="card-body text-center">
         <h5 class="card-title">Restaurant <br> {{restaurant.title}}</h5>
@@ -9,9 +11,16 @@
     <ul class="list-group list-group-flush">
     <li class="list-group-item">Adresse : {{restaurant.adress}}</li>
     <li class="list-group-item">Date de création : {{restaurant.dateOfCreation}}</li>
-    <li class="list-group-item">Note sur 5 : {{restaurant.note}}</li>
-
-
+    <li class="list-group-item">Note : {{restaurant.note}}/5</li>
+    
     </ul>
-    </div>
+    
     <br>  <br>
+
+<p class="card-text"><small class="text-muted">Likes: {{restaurant.likes}}</small></p>
+<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+<button type="button" class="btn btn-primary btn-sm" (click)="addLike()">Like</button>
+<button type="button" class="btn btn-secondary btn-sm" (click)="removeLike()">Dislike</button>
+</div>
+</div>
+</div>
