@@ -15,7 +15,8 @@ import { AccountComponent } from './account/account.component';
 import { OrdersComponent } from './orders/orders.component';
 import { MesRestosComponent } from './mes-restos/mes-restos.component';
 import { FormconnexionComponent } from './formconnexion/formconnexion.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RestaurantService } from './restaurant.service';
 
 @NgModule({
   declarations: [
@@ -37,9 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [RestaurantService, HttpClientModule, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

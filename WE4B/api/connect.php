@@ -3,7 +3,7 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'angular_db');
+define('DB_NAME', 'restaurants');
 
 // Connect with the database.
 function connect()

@@ -7,24 +7,15 @@ import { Observable, map } from 'rxjs';
   providedIn: 'root'
 })
 export class RestaurantService {
-  ServArray : Restaurant[] = []
 
-  baseUrl = 'http://localhost:4200'
+  ServArray : Restaurant[] = []
+  restaurant! : Restaurant;
   constructor(private http : HttpClient) { }
 
-  getAll() {
-    return this.http.get(`${this.baseUrl}/list`).pipe(
-      map((res: any) => {
-        return res['data'];
-      })
-    );
+  getRestaurants() : Observable<Restaurant[]> {
+    return this.http.get<Restaurant[]>('http://localhost:3000/restaurants')
     }
-
-    getAllRestaurants() : Observable<Restaurant[]> {
-      return this.http.get<Restaurant[]>(`${this.baseUrl}/restaurants`)
-    }
-      
-
+    
   getData() : Restaurant {
   
     return new Restaurant(1,"Auberge-fleurie", "Cuisine Française, Européenne", "2022-01-13", "41 rue des acacias",4.5,"./assets/img/1.jpg", 1);
