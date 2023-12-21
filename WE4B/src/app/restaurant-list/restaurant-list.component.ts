@@ -13,8 +13,13 @@ export class RestaurantListComponent implements OnInit{
 constructor(private restaurantService : RestaurantService) { }
 ngOnInit(): void {
 
-  this.restaurantService.getAll().subscribe((data: Restaurant[])=>{
-    console.log(data);
+  // this.restaurantService.getAll().subscribe((data: Restaurant[])=>{
+  //   console.log(data);
+  //   this.restaurantArray = data;
+  // });
+
+  this.restaurantService.getAllRestaurants().subscribe((data: Restaurant[])=>{
+    console.log("get all restaurants :", data);
     this.restaurantArray = data;
   });
 

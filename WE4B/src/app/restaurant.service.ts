@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Restaurant } from './models/restaurant';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { map } from 'rxjs';
 export class RestaurantService {
   ServArray : Restaurant[] = []
 
-  baseUrl = 'http://localhost:4200/'
+  baseUrl = 'http://localhost:4200'
   constructor(private http : HttpClient) { }
 
   getAll() {
@@ -19,6 +19,11 @@ export class RestaurantService {
       })
     );
     }
+
+    getAllRestaurants() : Observable<Restaurant[]> {
+      return this.http.get<Restaurant[]>(`${this.baseUrl}/restaurants`)
+    }
+      
 
   getData() : Restaurant {
   
