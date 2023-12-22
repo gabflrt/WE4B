@@ -15,6 +15,7 @@ import { AccountComponent } from './account/account.component';
 import { OrdersComponent } from './orders/orders.component';
 import { MesRestosComponent } from './mes-restos/mes-restos.component';
 import { FormconnexionComponent } from './formconnexion/formconnexion.component';
+import { FooterComponent } from './footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RestaurantService } from './restaurant.service';
 
@@ -32,7 +33,8 @@ import { RestaurantService } from './restaurant.service';
     FormcreacompteComponent,
     FormcrearestoComponent,
     MesRestosComponent,
-    FormconnexionComponent
+    FormconnexionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
