@@ -1,0 +1,94 @@
+{
+    "clients": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john.doe@gmail.com",
+            "phone": "1234567890",
+            "address": "123 Main St, New York, NY 10001",
+            "created_at": "2019-01-01 00:00:00",
+            "password": "123456",
+            "gerant": "1"
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "email": "jane.smith@gmail.com",
+            "phone": "0987654321",
+            "address": "456 Broadway, Los Angeles, CA 90012",
+            "created_at": "2020-02-02 00:00:00",
+            "password": "654321",
+            "gerant": "0"
+        },
+        {
+            "id": 21,
+            "name": "Robert Johnson",
+            "email": "robert.johnson@gmail.com",
+            "phone": "1122334455",
+            "address": "789 Park Ave, Chicago, IL 60601",
+            "created_at": "2023-12-22 00:00:00",
+            "password": "556677",
+            "gerant": "1"
+        },
+        {
+            "id": 22,
+            "name": "Alice Williams",
+            "email": "alice.williams@gmail.com",
+            "phone": "2233445566",
+            "address": "1012 Market St, San Francisco, CA 94103",
+            "created_at": "2023-12-22 00:00:00",
+            "password": "667788",
+            "gerant": "0"
+        },
+        {
+            "id": 41,
+            "name": "Charlie Brown",
+            "email": "charlie.brown@gmail.com",
+            "phone": "3344556677",
+            "address": "1314 Union St, Seattle, WA 98101",
+            "created_at": "2023-12-22 00:00:00",
+            "password": "778899",
+            "gerant": "1"
+        },
+        {
+            "id": 42,
+            "name": "David Johnson",
+            "email": "david.johnson@gmail.com",
+            "phone": "4455667788",
+            "address": "1516 Main St, Houston, TX 77002",
+            "created_at": "2023-12-22 00:00:00",
+            "password": "889900",
+            "gerant": "0"
+        },
+        {
+            "id": 61,
+            "name": "Emily Davis",
+            "email": "emily.davis@gmail.com",
+            "phone": "5566778899",
+            "address": "1718 Market St, Philadelphia, PA 19103",
+            "created_at": "2023-12-22 00:00:00",
+            "password": "990011",
+            "gerant": "1"
+        },
+        {
+            "id": 62,
+            "name": "Frank Miller",
+            "email": "frank.miller@gmail.com",
+            "phone": "6677889900",
+            "address": "1920 Broadway, Phoenix, AZ 85001",
+            "created_at": "2023-12-22 00:00:00",
+            "password": "001122",
+            "gerant": "0"
+        },
+        {
+            "id": 81,
+            "name": "Grace Wilson",
+            "email": "grace.wilson@gmail.com",
+            "phone": "7788990011",
+            "address": "2122 Main St, San Antonio, TX 78205",
+            "created_at": "2023-12-22 00:00:00",
+            "password": "112233",
+            "gerant": "1"
+        }
+    ]
+}
