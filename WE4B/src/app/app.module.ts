@@ -16,6 +16,8 @@ import { OrdersComponent } from './orders/orders.component';
 import { MesRestosComponent } from './mes-restos/mes-restos.component';
 import { FormconnexionComponent } from './formconnexion/formconnexion.component';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RestaurantService } from './restaurant.service';
 
 @NgModule({
   declarations: [
@@ -37,9 +39,10 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [RestaurantService, HttpClientModule, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
