@@ -15,6 +15,7 @@ import { AccountComponent } from './account/account.component';
 import { OrdersComponent } from './orders/orders.component';
 import { MesRestosComponent } from './mes-restos/mes-restos.component';
 import { FormconnexionComponent } from './formconnexion/formconnexion.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormconnexionComponent } from './formconnexion/formconnexion.component'
     FormcreacompteComponent,
     FormcrearestoComponent,
     MesRestosComponent,
-    FormconnexionComponent
+    FormconnexionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
