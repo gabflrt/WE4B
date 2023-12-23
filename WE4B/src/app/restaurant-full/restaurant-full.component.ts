@@ -13,8 +13,12 @@ export class RestaurantFullComponent implements OnInit {
   restaurant_id! : number
   restaurant! : Restaurant
   constructor(private activatedroute : ActivatedRoute, service : RestaurantService) {
-  this.restaurant_id = parseInt(this.activatedroute.snapshot.paramMap.get('restaurant_id') || '0')
-  this.restaurant = service.getData()
+    
+    this.restaurant_id = parseInt(this.activatedroute.snapshot.paramMap.get('id') || '0');    
+    service.getRestaurantFromId(this.restaurant_id).subscribe((data) => {
+      this.restaurant = data;
+    });
+    
   }
   ngOnInit(): void {
   }

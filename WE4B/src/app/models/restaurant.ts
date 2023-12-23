@@ -1,14 +1,18 @@
+import { Horaires } from "./horaires";
+
 export class Restaurant {
     constructor (
-    public restaurant_id: number,
+    public id: number,
     public title: string,
     public description: string,
     public dateOfCreation: string,
     public adress: string,
     public note: number,
     public img: string,
-    public likes:number) {
-    this.restaurant_id = restaurant_id;
+    public likes:number,
+    public horaires:Horaires,
+    public capacite: number,) {
+    this.id = id;
     this.description = description;
     this.title = title;
     this.dateOfCreation = dateOfCreation;
@@ -16,6 +20,8 @@ export class Restaurant {
     this.note = note;
     this.img = img;
     this.likes = likes;
+    this.horaires = horaires;
+    this.capacite = capacite;
     }
     }
     

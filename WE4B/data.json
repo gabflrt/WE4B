@@ -1,0 +1,159 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "title": "Auberge-fleurie",
+      "description": "Cuisine Française, Européenne",
+      "dateOfCreation": "2022-01-13",
+      "adress": "41 rue des acacias",
+      "note": 4.5,
+      "img": "./assets/img/1.jpg",
+      "likes": 0
+    },
+    {
+      "id": 2,
+      "title": "Les Capucins",
+      "description": "Cuisine Française, Européenne",
+      "dateOfCreation": "2022-01-13",
+      "adress": "45 rue des tournesols",
+      "note": 4.5,
+      "img": "./assets/img/2.jpg",
+      "likes": 0
+    },
+    {
+      "id": 3,
+      "title": "Auberge la Gogoline",
+      "description": "Cuisine Française, Internationale",
+      "dateOfCreation": "2022-01-13",
+      "adress": "23 rue des piverts",
+      "note": 4.5,
+      "img": "./assets/img/3.jpg",
+      "likes": 0
+    },
+    {
+      "id": 4,
+      "title": "Au Fil des Saisons",
+      "description": "Cuisine Française, Européenne",
+      "dateOfCreation": "2022-01-13",
+      "adress": "89 rue des arbres violets",
+      "note": 4.5,
+      "img": "./assets/img/4.jpg",
+      "likes": 0
+    },
+    {
+      "id": 5,
+      "title": "Le Saint Martin",
+      "description": "Cuisine Française, Européenne",
+      "dateOfCreation": "2022-01-13",
+      "adress": "78 rue des points",
+      "note": 4.5,
+      "img": "./assets/img/5.jpg",
+      "likes": 0
+    }
+  ],
+
+  "reservations": [
+    {
+        "id": 1,
+        "id_client": 1,
+        "id_resto": 1,
+        "date": "2020-12-12",
+        "time": "12:00:00",
+        "nb_personnes": 2
+    }
+  ],
+
+  "clients": [
+    {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.doe@gmail.com",
+        "phone": "1234567890",
+        "address": "123 Main St, New York, NY 10001",
+        "created_at": "2019-01-01 00:00:00",
+        "password": "123456",
+        "gerant": "1"
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": "jane.smith@gmail.com",
+        "phone": "0987654321",
+        "address": "456 Broadway, Los Angeles, CA 90012",
+        "created_at": "2020-02-02 00:00:00",
+        "password": "654321",
+        "gerant": "0"
+    },
+    {
+        "id": 21,
+        "name": "Robert Johnson",
+        "email": "robert.johnson@gmail.com",
+        "phone": "1122334455",
+        "address": "789 Park Ave, Chicago, IL 60601",
+        "created_at": "2023-12-22 00:00:00",
+        "password": "556677",
+        "gerant": "1"
+    },
+    {
+        "id": 22,
+        "name": "Alice Williams",
+        "email": "alice.williams@gmail.com",
+        "phone": "2233445566",
+        "address": "1012 Market St, San Francisco, CA 94103",
+        "created_at": "2023-12-22 00:00:00",
+        "password": "667788",
+        "gerant": "0"
+    },
+    {
+        "id": 41,
+        "name": "Charlie Brown",
+        "email": "charlie.brown@gmail.com",
+        "phone": "3344556677",
+        "address": "1314 Union St, Seattle, WA 98101",
+        "created_at": "2023-12-22 00:00:00",
+        "password": "778899",
+        "gerant": "1"
+    },
+    {
+        "id": 42,
+        "name": "David Johnson",
+        "email": "david.johnson@gmail.com",
+        "phone": "4455667788",
+        "address": "1516 Main St, Houston, TX 77002",
+        "created_at": "2023-12-22 00:00:00",
+        "password": "889900",
+        "gerant": "0"
+    },
+    {
+        "id": 61,
+        "name": "Emily Davis",
+        "email": "emily.davis@gmail.com",
+        "phone": "5566778899",
+        "address": "1718 Market St, Philadelphia, PA 19103",
+        "created_at": "2023-12-22 00:00:00",
+        "password": "990011",
+        "gerant": "1"
+    },
+    {
+        "id": 62,
+        "name": "Frank Miller",
+        "email": "frank.miller@gmail.com",
+        "phone": "6677889900",
+        "address": "1920 Broadway, Phoenix, AZ 85001",
+        "created_at": "2023-12-22 00:00:00",
+        "password": "001122",
+        "gerant": "0"
+    },
+    {
+        "id": 81,
+        "name": "Grace Wilson",
+        "email": "grace.wilson@gmail.com",
+        "phone": "7788990011",
+        "address": "2122 Main St, San Antonio, TX 78205",
+        "created_at": "2023-12-22 00:00:00",
+        "password": "112233",
+        "gerant": "1"
+    }
+]
+  
+}
