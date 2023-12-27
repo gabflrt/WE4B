@@ -15,6 +15,16 @@ constructor(private restaurantService : RestaurantService) {
     this.restaurantArray = data
     });
 }
+
+minNote: number = 0;
+maxNote: number = 5;
+
+validateMinMaxValues() {
+  if (this.minNote > this.maxNote) {
+    this.minNote = this.maxNote;
+  }
+}
+
 ngOnInit(): void {
 
 }

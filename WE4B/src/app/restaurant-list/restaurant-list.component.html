@@ -1,7 +1,18 @@
 <div class="container">
     <br><br><br><br>
     <div class="row row-cols-3">
-        <app-restaurant *ngFor="let restaurant of restaurantArray; let i = index" [restaurant]="restaurant"></app-restaurant>
+        <div class="col-sm">
+        <h2>Filtres</h2>   
+        
+        <p>Par notes :</p>
+        <input type="number" [(ngModel)]="minNote" placeholder="Note minimale" min="0" max="5" (change)="validateMinMaxValues()">
+        <input type="number" [(ngModel)]="maxNote" placeholder="Note maximale" min="0" max="5" (change)="validateMinMaxValues()">
+        </div>
+        
+        <div class="col-lg">
+            <app-restaurant *ngFor="let restaurant of restaurantArray | filter: minNote:maxNote ; let i = index" [restaurant]="restaurant"></app-restaurant>
+        </div>
+
 
     </div>
 </div>

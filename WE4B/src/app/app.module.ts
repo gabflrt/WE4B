@@ -18,6 +18,8 @@ import { FormconnexionComponent } from './formconnexion/formconnexion.component'
 import { FooterComponent } from './footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RestaurantService } from './restaurant.service';
+import { FilterPipe } from './filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { RestaurantService } from './restaurant.service';
     FormcrearestoComponent,
     MesRestosComponent,
     FormconnexionComponent,
-    FooterComponent
+    FooterComponent,
+    FilterPipe,
+    
   ],
   imports: [
     BrowserModule,
@@ -46,3 +50,5 @@ import { RestaurantService } from './restaurant.service';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

@@ -27,7 +27,7 @@
       "description": "Cuisine Française, Européenne",
       "dateOfCreation": "2022-01-13",
       "adress": "45 rue des tournesols",
-      "note": 4.5,
+      "note": 5,
       "img": "./assets/img/2.jpg",
       "likes": 0
     },
@@ -37,7 +37,7 @@
       "description": "Cuisine Française, Internationale",
       "dateOfCreation": "2022-01-13",
       "adress": "23 rue des piverts",
-      "note": 4.5,
+      "note": 2,
       "img": "./assets/img/3.jpg",
       "likes": 0
     },
@@ -47,7 +47,7 @@
       "description": "Cuisine Française, Européenne",
       "dateOfCreation": "2022-01-13",
       "adress": "89 rue des arbres violets",
-      "note": 4.5,
+      "note": 3.5,
       "img": "./assets/img/4.jpg",
       "likes": 0
     },
@@ -57,7 +57,7 @@
       "description": "Cuisine Française, Européenne",
       "dateOfCreation": "2022-01-13",
       "adress": "78 rue des points",
-      "note": 4.5,
+      "note": 4,
       "img": "./assets/img/5.jpg",
       "likes": 0
     }
