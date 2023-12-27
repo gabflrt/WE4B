@@ -16,7 +16,16 @@
                 <ul class="list-group list-group-flush">
                 <li class="list-group-item">Adresse : {{restaurant.adress}}</li>
                 <li class="list-group-item">Date de création : {{restaurant.dateOfCreation}}</li>
-                <li class="list-group-item">Note : {{restaurant.note}}/5</li>                
+                <li class="list-group-item">Note : {{restaurant.note}}/5</li>    
+                <!-- <li class="list-group-item">Horaires : {{displayHoraires()}}</li> -->
+                <h3>Horaires d'ouvertures</h3>
+                <table>
+                  <tr *ngFor="let day of ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche']; let i = index">
+                    <td>{{ day }}</td>
+                    <td>{{ restaurant.horaires.getDay(i) }}</td>
+                  </tr>
+                </table>
+
                 </ul>
             </div>
         </div>        

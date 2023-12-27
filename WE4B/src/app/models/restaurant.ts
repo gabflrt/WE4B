@@ -2,7 +2,7 @@ import { Horaires } from "./horaires";
 
 export class Restaurant {
     constructor (
-    public id: number,
+        public id: number,
     public title: string,
     public description: string,
     public dateOfCreation: string,
@@ -10,7 +10,7 @@ export class Restaurant {
     public note: number,
     public img: string,
     public likes:number,
-    public horaires:Horaires,
+    public horaires: Horaires = new Horaires(), // Ensure horaires is always an instance of Horaires
     public capacite: number,) {
     this.id = id;
     this.description = description;
@@ -23,5 +23,4 @@ export class Restaurant {
     this.horaires = horaires;
     this.capacite = capacite;
     }
-    }
-    
+}

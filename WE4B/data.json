@@ -8,7 +8,18 @@
       "adress": "41 rue des acacias",
       "note": 4.5,
       "img": "./assets/img/1.jpg",
-      "likes": 0
+      "likes": 0,
+      "horaires": 
+        {
+          "Lundi" : "12h00 - 15h00 / 19h00 - 22h00",
+          "Mardi" : "12h00 - 14h00 / 19h00 - 22h00",
+          "Mercredi" : "12h00 - 14h00 / 19h00 - 22h00",
+          "Jeudi" : "12h00 - 14h00 / 19h00 - 22h00",
+          "Vendredi" : "12h00 - 14h00 / 19h00 - 22h00",
+          "Samedi" : "12h00 - 14h00 / 21h00 - 22h00",
+          "Dimanche" : "12h00 - 14h00 / 19h00 - 22h00"
+        }
+      
     },
     {
       "id": 2,

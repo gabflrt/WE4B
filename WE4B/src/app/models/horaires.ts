@@ -1,7 +1,8 @@
 export class Horaires{
     constructor(
-        
-        public lundi: string = "12h - 14h / 19h - 22h",
+    
+
+        public  lundi: string = "12h - 14h / 19h - 22h",
         public mardi: string = "12h - 14h / 19h - 22h",
         public mercredi: string = "12h - 14h / 19h - 22h",
         public jeudi: string = "12h - 14h / 19h - 22h",
@@ -17,4 +18,19 @@ export class Horaires{
         this.samedi = samedi;
         this.dimanche = dimanche;
     }
+
+    getDay(day: number): string{
+        switch(day){
+            case 0: return this.lundi;
+            case 1: return this.mardi;
+            case 2: return this.mercredi;
+            case 3: return this.jeudi;
+            case 4: return this.vendredi;
+            case 5: return this.samedi;
+            case 6: return this.dimanche;
+            default: return "fermé";
+        }
+    }
+
+     
 }
