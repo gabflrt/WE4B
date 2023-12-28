@@ -20,6 +20,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RestaurantService } from './restaurant.service';
 import { FilterPipe } from './filter.pipe';
 import { FilterDatePipe } from './filter-date.pipe';
+import { FilterCityPipe } from './filter-city.pipe';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { FilterDatePipe } from './filter-date.pipe';
     FooterComponent,
     FilterPipe,
     FilterDatePipe,
+    FilterCityPipe,
     
   ],
   imports: [

@@ -6,6 +6,7 @@
       "description": "Cuisine Française, Européenne",
       "dateOfCreation": "2020-01-13",
       "adress": "41 rue des acacias",
+      "city": "Paris",
       "note": 4.5,
       "img": "./assets/img/1.jpg",
       "likes": 0,
@@ -27,6 +28,7 @@
       "description": "Cuisine Française, Européenne",
       "dateOfCreation": "2022-05-20",
       "adress": "45 rue des tournesols",
+      "city": "Belfort",
       "note": 5,
       "img": "./assets/img/2.jpg",
       "likes": 0
@@ -37,6 +39,7 @@
       "description": "Cuisine Française, Internationale",
       "dateOfCreation": "1999-11-03",
       "adress": "23 rue des piverts",
+      "city": "Montbéliard",
       "note": 2,
       "img": "./assets/img/3.jpg",
       "likes": 0
@@ -47,6 +50,7 @@
       "description": "Cuisine Française, Européenne",
       "dateOfCreation": "2005-01-01",
       "adress": "89 rue des arbres violets",
+      "city": "Lyon",
       "note": 3.5,
       "img": "./assets/img/4.jpg",
       "likes": 0
@@ -57,6 +61,7 @@
       "description": "Cuisine Française, Européenne",
       "dateOfCreation": "2017-07-23",
       "adress": "78 rue des points",
+      "city": "Belfort",
       "note": 4,
       "img": "./assets/img/5.jpg",
       "likes": 0

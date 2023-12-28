@@ -7,6 +7,7 @@ export class Restaurant {
     public description: string,
     public dateOfCreation: string,
     public adress: string,
+    public city: string,
     public note: number,
     public img: string,
     public likes:number,

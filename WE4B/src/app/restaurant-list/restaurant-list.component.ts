@@ -22,6 +22,8 @@ maxNote: number = 5;
 minDate: String = "1900-01-01";
 maxDate: String = "2024-01-01";
 
+villeRecherchee: string = '';
+
 validateMinMaxValues() {
   if (this.maxNote > 5){
     this.maxNote = 5;
