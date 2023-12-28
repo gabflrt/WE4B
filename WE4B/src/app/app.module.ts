@@ -19,6 +19,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RestaurantService } from './restaurant.service';
 import { FilterPipe } from './filter.pipe';
+import { FilterDatePipe } from './filter-date.pipe';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { FilterPipe } from './filter.pipe';
     FormconnexionComponent,
     FooterComponent,
     FilterPipe,
+    FilterDatePipe,
     
   ],
   imports: [

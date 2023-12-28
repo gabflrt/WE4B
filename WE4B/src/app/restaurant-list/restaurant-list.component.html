@@ -1,16 +1,21 @@
 <div class="container">
     <br><br><br><br>
-    <div class="row row-cols-3">
-        <div class="col-sm">
-        <h2>Filtres</h2>   
-        
-        <p>Par notes :</p>
-        <input type="number" [(ngModel)]="minNote" placeholder="Note minimale" min="0" max="5" (change)="validateMinMaxValues()">
-        <input type="number" [(ngModel)]="maxNote" placeholder="Note maximale" min="0" max="5" (change)="validateMinMaxValues()">
+    <div class="row">
+        <div class="col-4">
+            <br><br><h2>Filtres</h2><br>   
+            
+            <p>Par notes :</p>
+            <input type="number" [(ngModel)]="minNote" placeholder="Note minimale" min="0" max="5" (change)="validateMinMaxValues()" (type)="validateMinMaxValues()">
+            <input type="number" [(ngModel)]="maxNote" placeholder="Note maximale" min="0" max="5" (change)="validateMinMaxValues()" (type)="validateMinMaxValues()">
+            <br><br>
+
+            <p>Par date de création :</p>
+            <input type="date" [(ngModel)]="minDate" placeholder="Date minimale" (change)="validateMinMaxDate()" (type)="validateMinMaxDate()">
+            <input type="date" [(ngModel)]="maxDate" placeholder="Date maximale" (change)="validateMinMaxDate()" (type)="validateMinMaxDate()">
         </div>
         
-        <div class="col-lg">
-            <app-restaurant *ngFor="let restaurant of restaurantArray | filter: minNote:maxNote ; let i = index" [restaurant]="restaurant"></app-restaurant>
+        <div class="col-8">
+            <app-restaurant *ngFor="let restaurant of restaurantArray | filter: minNote:maxNote | filterDate: minDate:maxDate ; let i = index" [restaurant]="restaurant"></app-restaurant>
         </div>
 
 
