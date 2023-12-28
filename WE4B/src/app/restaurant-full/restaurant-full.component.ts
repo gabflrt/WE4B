@@ -5,6 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { RestaurantService } from '../restaurant.service';
 import { Restaurant } from '../models/restaurant';
 import { Horaires } from '../models/horaires';
+import { ReservationFormComponent } from '../reservation-form/reservation-form.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-restaurant-full',
@@ -15,9 +17,10 @@ export class RestaurantFullComponent implements OnInit {
   restaurant_id!: number;
   restaurant!: Restaurant;
 
-  constructor(private activatedroute: ActivatedRoute, private service: RestaurantService) {
+
+  constructor(private activatedroute: ActivatedRoute, private service: RestaurantService, public dialog: MatDialog) {
     this.restaurant_id = parseInt(this.activatedroute.snapshot.paramMap.get('id') || '0');
-    service.getRestaurantFromId(this.restaurant_id).subscribe((data) => {
+    this.service.getRestaurantFromId(this.restaurant_id).subscribe((data) => {
       this.restaurant = data;
 
       // Map JSON horaires to Horaires class
@@ -54,5 +57,12 @@ export class RestaurantFullComponent implements OnInit {
       jsonHoraires.Samedi || undefined,
       jsonHoraires.Dimanche || undefined
     );
+  }
+
+  openReservationForm(): void {
+    const dialogRef = this.dialog.open(ReservationFormComponent, {
+      width: '400px',
+      data: { /* You can pass data to the reservation form if needed */ }
+    });
   }
 }

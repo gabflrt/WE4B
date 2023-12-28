@@ -1,0 +1,21 @@
+
+
+<div>
+    <h2>Faire une réservation</h2>
+    <form #reservationForm="ngForm">
+      <label for="name">Nom de la réservation:</label>
+      <input type="text" id="name" name="name" ngModel required>
+  
+      <label for="seats">Nombre de places:</label>
+      <input type="number" id="seats" name="seats" ngModel required>
+  
+      <label for="time">Heure de réservation:</label>
+      <input type="text" id="time" name="time" ngModel required>
+  
+      <button mat-button (click)="validateReservation(reservationForm)" [disabled]="!reservationForm.valid">Valider</button>
+    </form>
+    <button mat-icon-button class="close-button" (click)="closeReservationForm()">
+        close
+    </button>
+  </div>
+  

@@ -20,6 +20,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RestaurantService } from './restaurant.service';
 import { FilterPipe } from './filter.pipe';
 import { FilterDatePipe } from './filter-date.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReservationFormComponent } from './reservation-form/reservation-form.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -40,13 +43,16 @@ import { FilterDatePipe } from './filter-date.pipe';
     FooterComponent,
     FilterPipe,
     FilterDatePipe,
+    ReservationFormComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatDialogModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [RestaurantService, HttpClientModule, HttpClient],
   bootstrap: [AppComponent]

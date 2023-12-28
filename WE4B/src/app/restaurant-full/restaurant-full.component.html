@@ -17,7 +17,9 @@
                 <li class="list-group-item">Adresse : {{restaurant.adress}}</li>
                 <li class="list-group-item">Date de création : {{restaurant.dateOfCreation}}</li>
                 <li class="list-group-item">Note : {{restaurant.note}}/5</li>    
-                <!-- <li class="list-group-item">Horaires : {{displayHoraires()}}</li> -->
+                <li class="list-group-item">Capacité : {{restaurant.capacite}} places</li>    
+                <button type="button" class="btn btn-info btn-sm" (click)="openReservationForm()">Faire une réservation</button>
+
                 <h3>Horaires d'ouvertures</h3>
                 <table>
                   <tr *ngFor="let day of ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche']; let i = index">
@@ -29,10 +31,6 @@
                 </ul>
             </div>
         </div>        
-        <p class="card-text"><small class="text-muted">Likes: {{restaurant.likes}}</small></p>
-        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-primary btn-sm" (click)="addLike()">Like</button>
-        <button type="button" class="btn btn-secondary btn-sm" (click)="removeLike()">Dislike</button>
     </div>
 </div>
 </div>

@@ -11,14 +11,8 @@
     <li class="list-group-item">Adresse : {{restaurant.adress}}</li>
     <li class="list-group-item">Date de création : {{restaurant.dateOfCreation}}</li>
     <li class="list-group-item">Note : {{restaurant.note}}/5</li>
-    <button type="button" class="btn btn-info" (click)="readMore()">Read More</button>
+    <button type="button" class="btn btn-info" (click)="readMore()">Page du restaurant </button>
     </ul>
     
-
-<p class="card-text"><small class="text-muted">Likes: {{restaurant.likes}}</small></p>
-<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-<button type="button" class="btn btn-primary btn-sm" [disabled]="buttonDisabled"(click)="addLike()">Like</button>
-<button type="button" class="btn btn-secondary btn-sm" [disabled]="!buttonDisabled"(click)="removeLike()">Dislike</button>
-</div>
 </div>
 <br><br><br>

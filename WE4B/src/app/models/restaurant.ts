@@ -10,7 +10,7 @@ export class Restaurant {
     public note: number,
     public img: string,
     public likes:number,
-    public horaires: Horaires = new Horaires(), // Ensure horaires is always an instance of Horaires
+    public horaires: Horaires = new Horaires(), 
     public capacite: number,) {
     this.id = id;
     this.description = description;
