@@ -20,7 +20,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RestaurantService } from './restaurant.service';
 import { FilterPipe } from './filter.pipe';
 import { FilterDatePipe } from './filter-date.pipe';
+<<<<<<< HEAD
 import { FilterCityPipe } from './filter-city.pipe';
+=======
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReservationFormComponent } from './reservation-form/reservation-form.component';
+import { MatDialogModule } from '@angular/material/dialog';
+>>>>>>> 9474238311c00fea889428f0e3851fdada1edde3
 
 
 @NgModule({
@@ -41,14 +47,20 @@ import { FilterCityPipe } from './filter-city.pipe';
     FooterComponent,
     FilterPipe,
     FilterDatePipe,
+<<<<<<< HEAD
     FilterCityPipe,
+=======
+    ReservationFormComponent,
+>>>>>>> 9474238311c00fea889428f0e3851fdada1edde3
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatDialogModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [RestaurantService, HttpClientModule, HttpClient],
   bootstrap: [AppComponent]

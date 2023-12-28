@@ -10,17 +10,16 @@
       "note": 4.5,
       "img": "./assets/img/1.jpg",
       "likes": 0,
-      "horaires": 
-        {
-          "Lundi" : "12h00 - 15h00 / 19h00 - 22h00",
-          "Mardi" : "12h00 - 14h00 / 19h00 - 22h00",
-          "Mercredi" : "12h00 - 14h00 / 19h00 - 22h00",
-          "Jeudi" : "12h00 - 14h00 / 19h00 - 22h00",
-          "Vendredi" : "12h00 - 14h00 / 19h00 - 22h00",
-          "Samedi" : "12h00 - 14h00 / 21h00 - 22h00",
-          "Dimanche" : "12h00 - 14h00 / 19h00 - 22h00"
-        }
-      
+      "capacite": 50,
+      "horaires": {
+        "Lundi": "fermé",
+        "Mardi": "12h - 13h / 19h - 22h",
+        "Mercredi": "12h - 14h / 19h - 21h",
+        "Jeudi": "12h - 13h / fermé",
+        "Vendredi": "12h - 14h / 19h - 22h",
+        "Samedi": "12h - 13h / 19h - 21h",
+        "Dimanche": "fermé"
+      }
     },
     {
       "id": 2,
@@ -31,7 +30,17 @@
       "city": "Belfort",
       "note": 5,
       "img": "./assets/img/2.jpg",
-      "likes": 0
+      "likes": 0,
+      "capacite": 24,
+      "horaires": {
+        "Lundi": "12h - 14h / 18h - 22h",
+        "Mardi": "12h - 15h / 19h - 22h",
+        "Mercredi": "fermé",
+        "Jeudi": "12h - 14h / 19h - 21h",
+        "Vendredi": "12h - 14h / 18h - 23h",
+        "Samedi": "fermé",
+        "Dimanche": "12h - 15h / 19h - 22h"
+      }
     },
     {
       "id": 3,
@@ -42,7 +51,17 @@
       "city": "Montbéliard",
       "note": 2,
       "img": "./assets/img/3.jpg",
-      "likes": 0
+      "likes": 0,
+      "capacite": 28,
+      "horaires": {
+        "Lundi": "fermé",
+        "Mardi": "12h - 14h / 18h - 21h",
+        "Mercredi": "12h - 15h / 19h - 22h",
+        "Jeudi": "fermé",
+        "Vendredi": "12h - 14h / 18h - 21h",
+        "Samedi": "12h - 15h / 19h - 22h",
+        "Dimanche": "fermé"
+      }
     },
     {
       "id": 4,
@@ -53,7 +72,17 @@
       "city": "Lyon",
       "note": 3.5,
       "img": "./assets/img/4.jpg",
-      "likes": 0
+      "likes": 0,
+      "capacite": 18,
+      "horaires": {
+        "Lundi": "fermé",
+        "Mardi": "12h - 14h / 18h - 21h",
+        "Mercredi": "fermé",
+        "Jeudi": "12h - 14h / 18h - 21h",
+        "Vendredi": "12h - 15h / 19h - 22h",
+        "Samedi": "fermé",
+        "Dimanche": "12h - 14h / 18h - 21h"
+      }
     },
     {
       "id": 5,
@@ -64,7 +93,17 @@
       "city": "Belfort",
       "note": 4,
       "img": "./assets/img/5.jpg",
-      "likes": 0
+      "likes": 0,
+      "capacite": 32,
+      "horaires": {
+        "Lundi": "fermé",
+        "Mardi": "12h - 14h / 18h - 22h",
+        "Mercredi": "12h - 14h / 18h - 21h",
+        "Jeudi": "fermé",
+        "Vendredi": "12h - 14h / 18h - 22h",
+        "Samedi": "fermé",
+        "Dimanche": "12h - 14h / 18h - 21h"
+      }
     }
   ],
 

@@ -1,7 +1,7 @@
 export class Horaires{
     constructor(
     
-
+        //Horaires par défaut, si aucun horaire n'a été renseigné
         public  lundi: string = "12h - 14h / 19h - 22h",
         public mardi: string = "12h - 14h / 19h - 22h",
         public mercredi: string = "12h - 14h / 19h - 22h",
