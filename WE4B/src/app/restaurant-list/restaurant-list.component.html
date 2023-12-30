@@ -1,7 +1,7 @@
 <div class="container">
     <br><br><br><br>
     <div class="row">
-        <div class="col-4">
+        <div class="col-2">
             
             <br><br><h2>Filtres</h2>   
             
@@ -19,15 +19,17 @@
             <input type="date" [(ngModel)]="maxDate" placeholder="Date maximale" (change)="validateMinMaxDate()" (type)="validateMinMaxDate()">
         </div>
         
-        <div class="col-8">
-            <select [(ngModel)]="triDirection" (ngModelChange)="triParNote()">
-                <option value="default">Par défault</option>
-                <option value="croissant">Par note croissante</option>
-                <option value="decroissant">Par note décroissante</option>
-            </select>
-            <app-restaurant *ngFor="let restaurant of restaurantArray | filter: minNote:maxNote | filterCity: villeRecherchee | filterDate: minDate:maxDate ; let i = index" [restaurant]="restaurant"></app-restaurant>
+        <div class="col-10">
+            <div class="container">
+                <select [(ngModel)]="triDirection" (ngModelChange)="triParNote()">
+                    <option value="default">Par défault</option>
+                    <option value="croissant">Par note croissante</option>
+                    <option value="decroissant">Par note décroissante</option>
+                </select>
+                <div class="row row-cols-3">
+                    <app-restaurant *ngFor="let restaurant of restaurantArray | filter: minNote:maxNote | filterCity: villeRecherchee | filterDate: minDate:maxDate ; let i = index" [restaurant]="restaurant"></app-restaurant>
+                </div>
+            </div>               
         </div>
-
-
     </div>
 </div>
