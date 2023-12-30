@@ -24,6 +24,8 @@ maxDate: String = "2024-01-01";
 
 villeRecherchee: string = '';
 
+triDirection: string = 'default';
+
 validateMinMaxValues() {
   if (this.maxNote > 5){
     this.maxNote = 5;
@@ -48,7 +50,25 @@ validateMinMaxDate() {
   }
 }
 
-ngOnInit(): void {
+triParNote() {
+  if (this.triDirection === 'default') {
+    this.restaurantArray.sort((a, b) => a.id - b.id); // Tri par défaut
+  } else if (this.triDirection === 'croissant') {
+    this.restaurantArray.sort((a, b) => a.note - b.note); // Tri croissant
+  } else if (this.triDirection === 'decroissant') {
+    this.restaurantArray.sort((a, b) => b.note - a.note); // Tri décroissant
+  }
+  
+}
 
+ngOnInit() {
+   };
 }
-}
+
+
+
+
+
+
+  
+
