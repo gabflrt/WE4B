@@ -8,6 +8,7 @@
                 <p class="card-text">Adresse: {{client.adress}}</p>
                 <p class="card-text">Date de création: {{client.created_at | date}}</p>
                 <p class="card-text">Compte gérant: {{client.gerant ? 'Oui' : 'Non'}}</p>
+                <button class="btn btn-primary" (click)="logout()">Déconnexion</button>
             </div>
         </div>
     </div>

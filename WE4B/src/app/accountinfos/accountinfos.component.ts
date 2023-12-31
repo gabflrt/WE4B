@@ -15,4 +15,8 @@ export class AccountinfosComponent implements OnInit {
   ngOnInit(): void {
     this.client = this.sessionService.client;
   }
+
+  logout() {
+    this.sessionService.client = null;
+  }
 }
