@@ -13,16 +13,62 @@ export class RestaurantListComponent implements OnInit{
 constructor(private restaurantService : RestaurantService) { 
   this.restaurantService.getRestaurants().subscribe((data) => {
     this.restaurantArray = data
-    console.log("restaurantArray : ", data);
     });
 }
-ngOnInit(): void {
 
-// this.restaurantArray.push(new Restaurant(1,"Auberge-fleurie", "Cuisine Française, Européenne", "2022-01-13", "41 rue des acacias",4.5,"./assets/img/1.jpg",0))
-// this.restaurantArray.push(new Restaurant(2,"Les Capucins", "Cuisine Française, Européenne", "2022-01-13", "45 rue des tournesols",4.5,"./assets/img/2.jpg",0))
-// this.restaurantArray.push(new Restaurant(3,"Auberge la Gogoline", "Cuisine Française, Internationale", "2022-01-13", "23 rue des piverts",4.5,"./assets/img/3.jpg",0))
-// this.restaurantArray.push(new Restaurant(4,"Au Fil des Saisons", "Cuisine Française, Européenne", "2022-01-13", "89 rue des arbres violets",4.5,"./assets/img/4.jpg",0))
-// this.restaurantArray.push(new Restaurant(5,"Le Saint Martin", "Cuisine Française, Européenne", "2022-01-13", "78 rue des points",4.5,"./assets/img/5.jpg",0))
+minNote: number = 0;
+maxNote: number = 5;
 
+minDate: String = "1900-01-01";
+maxDate: String = "2024-01-01";
+
+villeRecherchee: string = '';
+
+triDirection: string = 'default';
+
+validateMinMaxValues() {
+  if (this.maxNote > 5){
+    this.maxNote = 5;
+  }
+  if (this.minNote < 0){
+    this.minNote = 0;
+  }
+  if (this.minNote > this.maxNote) {
+    this.minNote = this.maxNote;
+  }
 }
+
+validateMinMaxDate() {
+  if (this.maxDate > "2024-01-01"){
+    this.maxDate = "2024-01-01";
+  }
+  if (this.minDate < "1900-01-01"){
+    this.minDate = "1900-01-01";
+  }
+  if (this.minDate > this.maxDate) {
+    this.minDate = this.maxDate;
+  }
 }
+
+triParNote() {
+  if (this.triDirection === 'default') {
+    this.restaurantArray.sort((a, b) => a.id - b.id); // Tri par défaut
+  } else if (this.triDirection === 'croissant') {
+    this.restaurantArray.sort((a, b) => a.note - b.note); // Tri croissant
+  } else if (this.triDirection === 'decroissant') {
+    this.restaurantArray.sort((a, b) => b.note - a.note); // Tri décroissant
+  }
+  
+}
+
+ngOnInit() {
+   };
+}
+
+
+
+
+
+
+  
+

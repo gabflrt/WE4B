@@ -18,6 +18,13 @@ import { FormconnexionComponent } from './formconnexion/formconnexion.component'
 import { FooterComponent } from './footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RestaurantService } from './restaurant.service';
+import { FilterPipe } from './filter.pipe';
+import { FilterDatePipe } from './filter-date.pipe';
+import { FilterCityPipe } from './filter-city.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReservationFormComponent } from './reservation-form/reservation-form.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -34,15 +41,24 @@ import { RestaurantService } from './restaurant.service';
     FormcrearestoComponent,
     MesRestosComponent,
     FormconnexionComponent,
-    FooterComponent
+    FooterComponent,
+    FilterPipe,
+    FilterDatePipe,
+    FilterCityPipe,
+    ReservationFormComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatDialogModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [RestaurantService, HttpClientModule, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
