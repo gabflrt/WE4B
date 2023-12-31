@@ -9,9 +9,9 @@ import { Horaires } from './models/horaires';
 })
 export class RestaurantService {
 
-  ServArray : Restaurant[] = []
-  restaurant! : Restaurant;
-  constructor(private http : HttpClient) { }
+  ServArray: Restaurant[] = []
+  restaurant!: Restaurant;
+  constructor(private http: HttpClient) { }
 
   getRestaurants() : Observable<Restaurant[]> {
     return this.http.get<Restaurant[]>('http://localhost:3000/restaurants')
@@ -24,4 +24,4 @@ export class RestaurantService {
 
 
 
-  }
+}
