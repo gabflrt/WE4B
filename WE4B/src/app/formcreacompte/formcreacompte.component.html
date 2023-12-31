@@ -1,35 +1,44 @@
 <div class="container">
-    <form class="formulaire">
+    <form class="formulaire" (ngSubmit)="addClient()">
         <h1 class="text-center">Rejoins la communauté !</h1>
         <br>
 
         <div class="form-row">
             <div class="col-md-5">
                 <label for="inputFirstName">Prénom</label>
-                <input type="text" class="form-control" placeholder="Prénom">
+                <input type="text" class="form-control" placeholder="Prénom" [(ngModel)]="client.firstName"
+                    name="firstName">
             </div>
             <div class="col-md-5">
                 <label for="inputLastName">Nom</label>
-                <input type="text" class="form-control" placeholder="Nom">
+                <input type="text" class="form-control" placeholder="Nom" [(ngModel)]="client.lastName" name="lastName">
             </div>
-        </div>
-
-        <div class="form-group">
-            <label for="inputPhone">Téléphone</label>
-            <input type="text" class="form-control" id="inputPhone" placeholder="Numéro de téléphone">
         </div>
         <div class="form-group">
             <label for="inputEmail">Email</label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com">
+            <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com"
+                [(ngModel)]="client.email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="inputPhone">Téléphone</label>
+            <input type="text" class="form-control" id="inputPhone" placeholder="Numéro de téléphone"
+                [(ngModel)]="client.phone" name="phone">
+        </div>
+        <div class="form-group">
+            <label for="inputAdress">Adresse</label>
+            <input type="text" class="form-control" id="inputAdress" placeholder="Adresse" [(ngModel)]="client.adress"
+                name="adress">
         </div>
         <div class="form-group">
             <label for="inputPassword">Mot de passe</label>
-            <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe"
+                [(ngModel)]="client.password" name="password">
         </div>
 
         <div class="form-group">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <input class="form-check-input" type="checkbox" id="gridCheck" [(ngModel)]="client.gerant"
+                    name="gerant">
                 <label class="form-check-label" for="gridCheck">
                     Compte gérant
                 </label>

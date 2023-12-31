@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientService } from '../client.service';
+import { Client } from '../models/client';
 
 @Component({
   selector: 'app-formcreacompte',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formcreacompte.component.css']
 })
 export class FormcreacompteComponent implements OnInit {
+  client: Client = new Client(0, "", "", "", 0, "", new Date(), "", false);
 
-  constructor() { }
+  constructor(private clientService: ClientService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
+  addClient() {
+    this.clientService.createClient(this.client).subscribe(response => {
+      console.log(response);
+    });
+  }
 }
