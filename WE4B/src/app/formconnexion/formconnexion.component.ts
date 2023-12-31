@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class FormconnexionComponent implements OnInit {
   client: Client = new Client(0, "", "", "", 0, "", new Date(), "", false);
+  errorMessage: string | null = null;
 
   constructor(private clientService: ClientService, private sessionService: SessionService, private router: Router) { }
 
@@ -25,11 +26,12 @@ export class FormconnexionComponent implements OnInit {
         this.router.navigate(['/accountinfos']);
       } else {
         console.log('Authentication failed');
+        this.errorMessage = 'La connexion a échoué. Veuillez vérifier vos identifiants.';
       }
     });
   }
 
-  
+
 
 
 }

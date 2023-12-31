@@ -1,6 +1,9 @@
 <div class="container">
     <form class="formulaire" (ngSubmit)="login()">
         <h1 class="text-center">Heureux de te revoir !</h1>
+        <div *ngIf="errorMessage" class="alert alert-danger">
+            {{errorMessage}}
+        </div>
         <div class="form-group">
             <label for="inputEmail">Email</label>
             <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com"
