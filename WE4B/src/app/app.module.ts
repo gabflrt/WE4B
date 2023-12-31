@@ -24,6 +24,7 @@ import { FilterCityPipe } from './filter-city.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReservationFormComponent } from './reservation-form/reservation-form.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TriPipe } from './tri.pipe';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     FilterDatePipe,
     FilterCityPipe,
     ReservationFormComponent,
+    TriPipe,
     
   ],
   imports: [
