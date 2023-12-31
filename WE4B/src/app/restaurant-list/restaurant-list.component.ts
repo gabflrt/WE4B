@@ -14,6 +14,7 @@ constructor(private restaurantService : RestaurantService) {
   this.restaurantService.getRestaurants().subscribe((data) => {
     this.restaurantArray = data
     });
+ 
 }
 
 minNote: number = 0;
@@ -50,17 +51,7 @@ validateMinMaxDate() {
   }
 }
 
-triParNote() {
-  if (this.triDirection === 'default') {
-    this.restaurantArray.sort((a, b) => a.id - b.id); // Tri par défaut
-  } else if (this.triDirection === 'croissant') {
-    this.restaurantArray.sort((a, b) => a.note - b.note); // Tri croissant
-  } else if (this.triDirection === 'decroissant') {
-    this.restaurantArray.sort((a, b) => b.note - a.note); // Tri décroissant
-  }
-  
-}
-
+ 
 ngOnInit() {
    };
 }
