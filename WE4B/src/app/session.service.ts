@@ -9,10 +9,19 @@ export class SessionService {
   private _client: Client | null = null;
 
   get client(): Client | null {
-    return this._client;
+    const client = localStorage.getItem('client');
+    return client ? JSON.parse(client) : null;
   }
 
   set client(client: Client | null) {
-    this._client = client;
+    if (client) {
+      localStorage.setItem('client', JSON.stringify(client));
+    } else {
+      localStorage.removeItem('client');
+    }
+  }
+
+  isAuthenticated(): boolean {
+    return this._client !== null || this.client !== null;
   }
 }

@@ -1,0 +1,8 @@
+<div *ngIf="client">
+    <h1>Bonjour, {{client.firstName}} {{client.lastName}}!</h1>
+    <p>Email: {{client.email}}</p>
+    <p>Téléphone: {{client.phone}}</p>
+    <p>Adresse: {{client.adress}}</p>
+    <p>Date de création: {{client.created_at | date}}</p>
+    <p>Compte gérant: {{client.gerant ? 'Oui' : 'Non'}}</p>
+</div>

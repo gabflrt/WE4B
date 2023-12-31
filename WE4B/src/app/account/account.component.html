@@ -1,10 +1,15 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <app-formconnexion></app-formconnexion>
-        </div>
-        <div class="col-md-6">
-            <app-formcreacompte></app-formcreacompte>
-        </div>
+    <div *ngIf="sessionService.isAuthenticated(); else notLoggedIn">
+        <app-accountinfos></app-accountinfos>
     </div>
-</div>
+    <ng-template #notLoggedIn>
+        <div class="row">
+            <div class="col-md-6">
+                <app-formconnexion></app-formconnexion>
+            </div>
+            <div class="col-md-6">
+                <app-formcreacompte></app-formcreacompte>
+            </div>
+        </div>
+    </ng-template>
+</div>.

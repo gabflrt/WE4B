@@ -16,13 +16,13 @@ export class ClientService {
     return this.http.post<Client>(this.apiUrl, client);
   }
 
-  authenticate(client: Client): Observable<boolean> {
+  authenticate(client: Client): Observable<Client | null> {
     return this.http.get<Client[]>(this.apiUrl).pipe(
       map(clients => {
         const user = clients.find(
           c => c.email === client.email && c.password === client.password
         );
-        return user !== undefined;
+        return user ? user : null;
       })
     );
   }
