@@ -1,8 +1,14 @@
-<div *ngIf="client">
-    <h1>Bonjour, {{client.firstName}} {{client.lastName}}!</h1>
-    <p>Email: {{client.email}}</p>
-    <p>Téléphone: {{client.phone}}</p>
-    <p>Adresse: {{client.adress}}</p>
-    <p>Date de création: {{client.created_at | date}}</p>
-    <p>Compte gérant: {{client.gerant ? 'Oui' : 'Non'}}</p>
+<div class="row">
+    <div class="col-lg-6 mx-auto">
+        <div *ngIf="client" class="card">
+            <div class="card-body">
+                <h5 class="card-title">Bonjour, {{client.firstName}} {{client.lastName}}!</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{client.email}}</h6>
+                <p class="card-text">Téléphone: {{client.phone}}</p>
+                <p class="card-text">Adresse: {{client.adress}}</p>
+                <p class="card-text">Date de création: {{client.created_at | date}}</p>
+                <p class="card-text">Compte gérant: {{client.gerant ? 'Oui' : 'Non'}}</p>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.card {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 5px #808080;
+    border-radius: 20px;
+    padding: 2% 5% 2% 5%;
+}
+
+.card-title {
+    margin-top: 5%;
+}
+
+.card-text {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
