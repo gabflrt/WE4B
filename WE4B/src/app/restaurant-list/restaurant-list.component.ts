@@ -8,7 +8,7 @@ import { RestaurantService } from '../restaurant.service';
   styleUrls: ['./restaurant-list.component.css']
 })
 export class RestaurantListComponent implements OnInit{
-
+//comment
   restaurantArray : Restaurant[] = []
 constructor(private restaurantService : RestaurantService) { 
   this.restaurantService.getRestaurants().subscribe((data) => {
