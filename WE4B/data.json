@@ -226,6 +226,39 @@
       "created_at": "2023-12-31T12:35:35.888Z",
       "password": "rehsjjutryshjtsrhtsrh",
       "gerant": true
+    },
+    {
+      "id": 83,
+      "firstName": "Gabriel",
+      "lastName": "Fleuret",
+      "email": "gabfleuret@gmail.com",
+      "phone": "0783758189",
+      "adress": "20 Rue Victor Hugo",
+      "created_at": "2024-01-01T14:25:21.754Z",
+      "password": "gab",
+      "gerant": false
+    },
+    {
+      "id": 84,
+      "firstName": "Gabriel",
+      "lastName": "Fleuret",
+      "email": "gabfleuret@gmail.com",
+      "phone": "0783758189",
+      "adress": "20 Rue Victor Hugo",
+      "created_at": "2024-01-01T14:25:21.754Z",
+      "password": "gab",
+      "gerant": false
+    },
+    {
+      "id": 85,
+      "firstName": "Gabriel",
+      "lastName": "Fleuret",
+      "email": "gabfleuret@gmail.com",
+      "phone": "0783758189",
+      "adress": "20 Rue Victor Hugo",
+      "created_at": "2024-01-01T14:27:55.124Z",
+      "password": "dffgf",
+      "gerant": false
     }
   ]
 }
