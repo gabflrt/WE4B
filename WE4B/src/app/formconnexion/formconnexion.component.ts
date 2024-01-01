@@ -24,6 +24,7 @@ export class FormconnexionComponent implements OnInit {
         console.log('Authenticated succeeded');
         this.sessionService.client = client;
         this.router.navigate(['/accountinfos']);
+        window.location.reload();
       } else {
         console.log('Authentication failed');
         this.errorMessage = 'La connexion a échoué. Veuillez vérifier vos identifiants.';

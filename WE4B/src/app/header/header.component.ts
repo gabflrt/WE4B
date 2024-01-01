@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Client } from '../models/client';
+import { SessionService } from '../session.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  client: Client | null = null;
+
+  constructor(private sessionService: SessionService) { }
 
   ngOnInit(): void {
+    this.client = this.sessionService.client;
   }
+
 
 }
