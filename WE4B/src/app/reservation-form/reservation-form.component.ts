@@ -8,6 +8,7 @@ import { Restaurant } from '../models/restaurant';
 import { RestaurantService } from '../restaurant.service';
 import { MatDatepicker, MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { MatDatepickerControl, MatDatepickerPanel } from '@angular/material/datepicker/datepicker-base';
+import { ReservationService } from '../reservation.service';
 
 @Component({
   selector: 'app-reservation-form',
@@ -25,6 +26,7 @@ export class ReservationFormComponent {
     public dialogRef: MatDialogRef<ReservationFormComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private formBuilder: FormBuilder,
+    private reservationService: ReservationService,
   ) {
     this.client = data.client;
     this.restaurant = data.restaurant;
@@ -33,18 +35,38 @@ export class ReservationFormComponent {
       name: [this.client?.lastName, Validators.required],
       seats: [null, [Validators.required, Validators.max(this.restaurant.capacite)]],
       date: [null, Validators.required],
-      time: [null, Validators.required],
     });
   }
 
+
   validateReservation(): void {
     if (this.reservationForm.valid) {
-      const datetimeValue = this.reservationForm.get('datetime')?.value;
-      // Process reservation data with datetimeValue
-      this.dialogRef.close();
+      // Get form values
+      const name = this.reservationForm.get('name')?.value;
+      const seats = this.reservationForm.get('seats')?.value;
+      const date = this.reservationForm.get('date')?.value;
+
+      // Prepare reservation data
+      const reservationData = {
+        id_client: this.client?.id,
+        id_resto: this.restaurant.id,
+        name,
+        date: this.formatDate(date), // Format date if needed
+        nb_personnes: seats
+      };
+
+      // Save reservation using the service
+      this.reservationService.saveReservation(reservationData)
+        .subscribe(() => {
+          console.log('Reservation saved successfully');
+          this.dialogRef.close(); // Close the dialog
+        }, error => {
+          console.error('Error saving reservation:', error);
+          // Handle error if needed
+        });
     }
   }
-  
+
 
   closeReservationForm(): void {
     this.dialogRef.close();
@@ -52,5 +74,10 @@ export class ReservationFormComponent {
 
   addEvent(type: string, event: MatDatepickerInputEvent<Date>): void {
     this.reservationForm.patchValue({ time: event.value });
+  }
+
+  private formatDate(date: Date): string {
+    // Implement date formatting logic if needed
+    return date.toISOString();
   }
 }
