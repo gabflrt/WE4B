@@ -21,14 +21,18 @@
         
         <div class="col-10">
             <div class="container">
-                <select [(ngModel)]="triDirection">
+                <select [(ngModel)]="triDirection" (ngModelChange)="triParNote()">
                     <option value="default">Par défault</option>
                     <option value="croissant">Par note croissante</option>
                     <option value="decroissant">Par note décroissante</option>
                 </select>
                 <div class="row row-cols-3">
-                    <app-restaurant *ngFor="let restaurant of restaurantArray | filter: minNote:maxNote | filterCity: villeRecherchee | filterDate: minDate:maxDate | tri: triDirection; let i = index" [restaurant]="restaurant"></app-restaurant>
-                </div>
+                    <app-restaurant
+                      *ngFor="let restaurant of restaurantArray | filter: minNote:maxNote | filterCity: villeRecherchee | filterDate: minDate:maxDate ; let i = index"
+                      [restaurant]="restaurant"
+                      [numberOfStars]="getNumberOfStars(restaurant.note)"
+                    ></app-restaurant>
+                  </div>
             </div>               
         </div>
     </div>
