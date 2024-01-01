@@ -1,19 +1,25 @@
+
 <br>
-<div class="card" style="width: 18rem;">
-    <div class="card-body text-center">
-        <h5 class="card-title">{{restaurant.title}}</h5>
+<div class="card" style="width: 18rem; height: auto;">
+  <div class="card-body text-center">
+    <h5 class="card-title">Restaurant <br> {{restaurant.title}}</h5>
         
-        <img src={{restaurant.img}} class="restaurant-image" alt="...">
-        <br><br>
+    <img src={{restaurant.img}} class="restaurant-image" alt="...">
+    <br><br>
     <p class="card-text">{{restaurant.description}}</p>
-    </div>
-    <ul class="list-group list-group-flush">
+  </div>
+  <ul class="list-group list-group-flush">
     <li class="list-group-item">Adresse : {{restaurant.adress}}</li>
     <li class="list-group-item">Ville : {{restaurant.city}}</li>
     <li class="list-group-item">Date de création : {{restaurant.dateOfCreation}}</li>
-    <li class="list-group-item">Note : {{restaurant.note}}/5</li>
+    <li class="list-group-item">Note :
+      <div class="star-rating">
+        <span *ngFor="let i of getRange(numberOfStars)" [class.filled]="i <= restaurant.note">&#9733;</span>
+      </div>
+      {{restaurant.note}}/5
+    </li>
     <button type="button" class="btn btn-info" (click)="readMore()">Page du restaurant </button>
-    </ul>    
+  </ul>    
 </div>
 <br><br>
 
