@@ -1,26 +1,24 @@
-
-
+<!-- reservation-form.component.html -->
 <div>
-    <h2>Faire une réservation</h2>
-    <form #reservationForm="ngForm">
-      <label for="name">Nom de la réservation:</label>
-      <ng-container *ngIf="client">
-        <input type="text" id="name" name="name" [value]="client?.lastName" required>
-      </ng-container>
-      <ng-container *ngIf="!client">
-        <input type="text" id="name" name="name" required>
-      </ng-container>
-  
-      <label for="seats">Nombre de places:</label>
-      <input type="number" id="seats" name="seats" ngModel required>
-  
-      <label for="time">Heure de réservation:</label>
-      <input type="text" id="time" name="time" ngModel required>
-  
-      <button mat-button (click)="validateReservation(reservationForm)" [disabled]="!reservationForm.valid">Valider</button>
-    </form>
-    <button mat-icon-button class="close-button" (click)="closeReservationForm()">
-        close
-    </button>
-  </div>
-  
+  <h2>Faire une réservation</h2>
+  <form [formGroup]="reservationForm" (ngSubmit)="validateReservation()">
+    <label for="name">Nom de la réservation:</label>
+    <input type="text" id="name" name="name" formControlName="name" required>
+
+    <label for="seats">Nombre de places:</label>
+    <input type="number" id="seats" name="seats" formControlName="seats" required>
+    <div classname= "seatMaxExceeded" *ngIf="reservationForm.get('seats')?.hasError('max')">
+      Le nombre de places ne peut pas dépasser la capacité du restaurant.
+    </div>
+
+    <label for="time">Date de la réservation:</label>
+    <input matInput [matDatepicker]="picker" formControlName="time" required>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <br/>
+    <button mat-button type="submit" [disabled]="!reservationForm.valid">Valider</button>
+  </form>
+  <button mat-icon-button class="close-button" (click)="closeReservationForm()">
+    close
+  </button>
+</div>

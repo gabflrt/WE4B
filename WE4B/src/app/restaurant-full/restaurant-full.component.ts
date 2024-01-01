@@ -67,7 +67,7 @@ export class RestaurantFullComponent implements OnInit {
 
   openReservationForm(): void {
     const dialogRef = this.dialog.open(ReservationFormComponent, {
-      width: '400px',
+      width: '500px',
       data: { restaurant: this.restaurant, client: this.client }
     });
   }

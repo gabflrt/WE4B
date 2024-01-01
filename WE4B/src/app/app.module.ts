@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { RestaurantListComponent } from './restaurant-list/restaurant-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RestaurantFullComponent } from './restaurant-full/restaurant-full.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormcreacompteComponent } from './formcreacompte/formcreacompte.component';
@@ -26,6 +26,11 @@ import { ReservationFormComponent } from './reservation-form/reservation-form.co
 import { MatDialogModule } from '@angular/material/dialog';
 import { TriPipe } from './tri.pipe';
 import { AccountinfosComponent } from './accountinfos/accountinfos.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import {MatInputModule} from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
+import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
+
 
 
 @NgModule({
@@ -59,6 +64,12 @@ import { AccountinfosComponent } from './accountinfos/accountinfos.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    NgxMatDatetimePickerModule,
+    NgxMatTimepickerModule,
   ],
   providers: [RestaurantService, HttpClientModule, HttpClient],
   bootstrap: [AppComponent]
