@@ -14,7 +14,9 @@ export class HeaderComponent implements OnInit {
   constructor(private sessionService: SessionService) { }
 
   ngOnInit(): void {
-    this.client = this.sessionService.client;
+    if (this.sessionService.client) {
+      this.client = this.sessionService.client;
+    }
   }
 
 

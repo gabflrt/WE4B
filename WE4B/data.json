@@ -259,6 +259,39 @@
       "created_at": "2024-01-01T14:27:55.124Z",
       "password": "dffgf",
       "gerant": false
+    },
+    {
+      "id": 86,
+      "firstName": "Delisle",
+      "lastName": "Matthieu",
+      "email": "mathrunazererza@hotmail.com",
+      "phone": "0785765770",
+      "adress": "23 Rue Chaudron",
+      "created_at": "2024-01-01T14:46:12.803Z",
+      "password": "azerazer",
+      "gerant": false
+    },
+    {
+      "id": 87,
+      "firstName": "Delisle",
+      "lastName": "Matthieu",
+      "email": "mathrunazererza@hotmail.com",
+      "phone": "0785765770",
+      "adress": "23 Rue Chaudron",
+      "created_at": "2024-01-01T14:46:12.803Z",
+      "password": "azerazer",
+      "gerant": false
+    },
+    {
+      "id": 88,
+      "firstName": "Matthieu",
+      "lastName": "Delisle",
+      "email": "mathrun@hotmail.com",
+      "phone": "0785765770",
+      "adress": "11 rue de la sportive",
+      "created_at": "2024-01-01T14:48:06.082Z",
+      "password": "123",
+      "gerant": true
     }
   ]
 }
