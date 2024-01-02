@@ -17,8 +17,8 @@
                 <li class="list-group-item">Adresse : {{restaurant.adress}}</li>
                 <li class="list-group-item">Date de création : {{restaurant.dateOfCreation}}</li>
                 <li class="list-group-item">Note : {{restaurant.note}}/5</li>    
-                <li class="list-group-item">Capacité : {{restaurant.capacite}} places</li>    
-                <button type="button" class="btn btn-info btn-sm" (click)="openReservationForm()">Faire une réservation</button>
+                <li class="list-group-item">Capacité : {{restaurant.capacite}} places</li>   
+                <button type="button" class="btn btn-info btn-sm" *ngIf="client"  [disabled]="!client" (click)="openReservationForm()">Faire une réservation</button>
 
                 <h3>Horaires d'ouvertures</h3>
                 <table>

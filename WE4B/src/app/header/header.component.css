@@ -59,6 +59,10 @@ a {
 
 }
 
+.clientName{
+    margin-left: 100px;
+}
+
 .connection #formlogin {
 
     width: 17%;

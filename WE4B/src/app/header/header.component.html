@@ -1,7 +1,12 @@
 <header>
     <a routerLink="">
-        <h2>MonResto.com</h2>
-
+        <h2>MonResto.com   </h2>
+        <ng-container *ngIf="client"> 
+            <h5 class="clientName"> Bonjour {{client.firstName}} {{client.lastName}} !</h5>
+        </ng-container>
+        <ng-container *ngIf="!client"> 
+            <h5 class="clientName">  Bonjour visiteur ! </h5>
+        </ng-container>
     </a>
     <app-navbar></app-navbar>
 </header>

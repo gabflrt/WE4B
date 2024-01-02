@@ -10,30 +10,33 @@ import { Router } from '@angular/router';
 
 export class RestaurantComponent {
 
-  @Input() restaurant!:Restaurant;
-  buttonDisabled:boolean = false;
+  @Input() restaurant!: Restaurant;
+  @Input() numberOfStars!: number;
+  buttonDisabled: boolean = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router) {}
 
-  }
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   readMore() {
-    this.router.navigate(['/', 'restaurant', this.restaurant.id])
-}
-  addLike(){
-    if (this.restaurant.likes>=0){
+    this.router.navigate(['/', 'restaurant', this.restaurant.id]);
+  }
+
+  addLike() {
+    if (this.restaurant.likes >= 0) {
       this.restaurant.likes++;
-      this.buttonDisabled=true;
+      this.buttonDisabled = true;
     }
   }
 
-  removeLike(){
-    if(this.restaurant.likes>0){
+  removeLike() {
+    if (this.restaurant.likes > 0) {
       this.restaurant.likes--;
-      this.buttonDisabled=false;
+      this.buttonDisabled = false;
     }
   }
-  
+
+  getRange(number: number): number[] {
+    return new Array(number);
+  }
 }

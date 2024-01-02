@@ -7,6 +7,8 @@ import { Restaurant } from '../models/restaurant';
 import { Horaires } from '../models/horaires';
 import { ReservationFormComponent } from '../reservation-form/reservation-form.component';
 import { MatDialog } from '@angular/material/dialog';
+import { Client } from '../models/client';
+import { SessionService } from '../session.service';
 
 @Component({
   selector: 'app-restaurant-full',
@@ -16,9 +18,10 @@ import { MatDialog } from '@angular/material/dialog';
 export class RestaurantFullComponent implements OnInit {
   restaurant_id!: number;
   restaurant!: Restaurant;
+  client: Client | null = null;
 
 
-  constructor(private activatedroute: ActivatedRoute, private service: RestaurantService, public dialog: MatDialog) {
+  constructor(private activatedroute: ActivatedRoute, private service: RestaurantService, public dialog: MatDialog,private sessionService: SessionService) {
     this.restaurant_id = parseInt(this.activatedroute.snapshot.paramMap.get('id') || '0');
     this.service.getRestaurantFromId(this.restaurant_id).subscribe((data) => {
       this.restaurant = data;
@@ -33,7 +36,10 @@ export class RestaurantFullComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.client = this.sessionService.client;
+
+  }
 
   addLike() {
     if (this.restaurant.likes >= 0) {
@@ -61,8 +67,8 @@ export class RestaurantFullComponent implements OnInit {
 
   openReservationForm(): void {
     const dialogRef = this.dialog.open(ReservationFormComponent, {
-      width: '400px',
-      data: { /* You can pass data to the reservation form if needed */ }
+      width: '500px',
+      data: { restaurant: this.restaurant, client: this.client }
     });
   }
 }
