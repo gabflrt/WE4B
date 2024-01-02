@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ReservationService } from '../reservation.service';
 import { Client } from '../models/client';
 import { SessionService } from '../session.service';
+import { RestaurantService } from '../restaurant.service';
 
 @Component({
   selector: 'app-orders',
@@ -10,16 +11,20 @@ import { SessionService } from '../session.service';
 })
 export class OrdersComponent implements OnInit {
 
-  userReservations: any[] = []; // Define a property to store user reservations
+  userReservations: any[] = [];
   client: Client | null = null;
   client_id!: number;
-  constructor(private reservationService: ReservationService, private sessionService : SessionService ) {}
+
+  constructor(
+    private reservationService: ReservationService,
+    private sessionService: SessionService,
+    private restaurantService: RestaurantService
+  ) {}
 
   ngOnInit(): void {
-    // Assuming you have a way to get the user ID, replace '1' with the actual user ID
     this.client = this.sessionService.client;
 
-    if (this.client){
+    if (this.client) {
       this.client_id = this.client.id;
     }
 
@@ -27,6 +32,20 @@ export class OrdersComponent implements OnInit {
     this.reservationService.getReservationsByClient(this.client_id)
       .subscribe((reservations: any[]) => {
         this.userReservations = reservations;
+
+        // Fetch restaurant names for each reservation
+        this.userReservations.forEach(reservation => {
+          this.restaurantService.getRestaurantFromId(reservation.id_resto)
+            .subscribe(
+              (restaurant) => {
+                reservation.restaurantName = restaurant.title;
+              },
+              (error) => {
+                console.error('Error fetching restaurant:', error);
+                // Handle error if needed
+              }
+            );
+        });
       }, error => {
         console.error('Error fetching reservations:', error);
         // Handle error if needed

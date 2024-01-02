@@ -38,7 +38,6 @@ export class RestaurantFullComponent implements OnInit {
 
   ngOnInit(): void {
     this.client = this.sessionService.client;
-
   }
 
   addLike() {

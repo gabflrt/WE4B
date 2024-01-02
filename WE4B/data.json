@@ -146,6 +146,22 @@
       "date": "2024-01-08T23:00:00.000Z",
       "nb_personnes": 23,
       "id": 5
+    },
+    {
+      "id_client": 88,
+      "id_resto": 1,
+      "name": "Delisle",
+      "date": "2024-01-17T23:00:00.000Z",
+      "nb_personnes": 33,
+      "id": 6
+    },
+    {
+      "id_client": 89,
+      "id_resto": 3,
+      "name": "Dupont",
+      "date": "2024-01-10T23:00:00.000Z",
+      "nb_personnes": 23,
+      "id": 7
     }
   ],
   "clients": [
@@ -324,6 +340,17 @@
       "created_at": "2024-01-01T14:48:06.082Z",
       "password": "123",
       "gerant": true
+    },
+    {
+      "id": 89,
+      "firstName": "Matthieu",
+      "lastName": "Dupont",
+      "email": "mattfreeerun@hotmail.com",
+      "phone": "0785765770",
+      "adress": "11 rue de la sportive",
+      "created_at": "2024-01-02T15:33:59.984Z",
+      "password": "123",
+      "gerant": false
     }
   ]
 }

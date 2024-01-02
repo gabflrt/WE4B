@@ -11,11 +11,12 @@
             <li class="nav-item">
                 <a class="nav-link" routerLink='/account'>Compte</a>
             </li>
-            <li class="nav-item">
+            <!-- Que pour les clients et gérants-->
+            <li class="nav-item" *ngIf="client">
                 <a class="nav-link" routerLink='/orders'>Réservations</a>
             </li>
             <!-- Que pour les gérants de resto -->
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="client?.gerant" >
                 <a class="nav-link" routerLink='/restos'>Mes Restos</a>
             </li>
         </ul>

@@ -1,0 +1,21 @@
+/* Add this CSS to your component's style file (e.g., orders.component.css) */
+
+.text-center {
+    text-align: center;
+  }
+  
+  .reservations-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .reservation-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Add more styles as needed */
+  
+  

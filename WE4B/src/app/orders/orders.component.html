@@ -1,9 +1,12 @@
 <br><br><br><br>
 <h1 class="text-center">Mes réservations</h1>
-<div *ngIf="client">
-    <div *ngFor="let reservation of userReservations">
-        <p>{{ reservation.name }} - {{ reservation.date }} - {{ reservation.nb_personnes }} personnes</p>
-      </div>
+<div class="reservations-container" *ngIf="client">
+  <div *ngFor="let reservation of userReservations" class="reservation-item">
+    <p><strong> Nom de la réservation : </strong>{{ reservation.name }}</p>
+    <p><strong> Nom du restaurant : </strong>{{ reservation.restaurantName }}</p>
+    <p><strong> Date de la réservation :</strong>  {{ reservation.date | date:'mediumDate' }}</p>
+    <p><strong> Nombre de personnes :</strong> {{ reservation.nb_personnes }}</p>
+  </div>
 </div>
 
   

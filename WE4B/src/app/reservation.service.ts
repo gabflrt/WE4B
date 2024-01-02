@@ -18,7 +18,7 @@ export class ReservationService {
   }
 
   getReservationsByClient(clientId: number): Observable<any> {
-    const url = `http://localhost:3000/reservations?client=${clientId}`;
+    const url = `http://localhost:3000/reservations?id_client=${clientId}`;
     return this.http.get(url);
   }
 }
