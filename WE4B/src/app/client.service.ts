@@ -27,4 +27,14 @@ export class ClientService {
     );
   }
 
+  checkEmail(email: string): Observable<boolean> {
+    return this.http.get<Client[]>(this.apiUrl).pipe(
+      map(clients => {
+        const user = clients.find(c => c.email === email);
+        return user ? true : false;
+      })
+    );
+  }
+
+
 }

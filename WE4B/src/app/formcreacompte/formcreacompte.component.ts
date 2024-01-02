@@ -24,14 +24,21 @@ export class FormcreacompteComponent implements OnInit {
       return;
     }
 
-    this.clientService.createClient(this.client).subscribe(response => {
-      if (response) {
-        console.log('Account creation succeeded');
-        this.successMessage = 'Le compte a bien été créé.';
-      } else {
-        console.log('Account creation failed');
-        this.errorMessage = 'La création du compte a échoué. Veuillez réessayer.';
+    this.clientService.checkEmail(this.client.email).subscribe(exists => {
+      if (exists) {
+        this.errorMessage = 'Un compte avec cette adresse e-mail existe déjà.';
+        return;
       }
+
+      this.clientService.createClient(this.client).subscribe(response => {
+        if (response) {
+          console.log('Account creation succeeded');
+          this.successMessage = 'Le compte a bien été créé.';
+        } else {
+          console.log('Account creation failed');
+          this.errorMessage = 'La création du compte a échoué. Veuillez réessayer.';
+        }
+      });
     });
   }
 
