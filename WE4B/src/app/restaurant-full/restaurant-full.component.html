@@ -1,37 +1,79 @@
-<br><br><br><br><br>
+<br><br><br><br>
 
 <div class="row h-100 justify-content-center align-items-center">
-<div class="card">
-    <div class="row no-gutters" *ngIf="restaurant">
+    <div class="card" style="height: auto;">
+      <div class="row no-gutters" *ngIf="restaurant">
+        
         <div class="col-md-4">
-            <h3 class="card-title">{{restaurant.title}}</h3>        
-            <img src={{restaurant.img}} class="restaurant-image" alt="...">
+          <h3 class="card-title">{{ restaurant.title }}</h3>
+          <img [src]="restaurant.img" class="restaurant-image" alt="...">
         </div>
         <div class="col-md-8">
-            <div class="card-body">
-                <div class="card-body text-center">
-                    <br><br>
-                <p class="card-text">{{restaurant.description}}</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                <li class="list-group-item">Adresse : {{restaurant.adress}}</li>
-                <li class="list-group-item">Date de création : {{restaurant.dateOfCreation}}</li>
-                <li class="list-group-item">Note : {{restaurant.note}}/5</li>    
-                <li class="list-group-item">Capacité : {{restaurant.capacite}} places</li>   
-                <button type="button" class="btn btn-info btn-sm" *ngIf="client"  [disabled]="!client" (click)="openReservationForm()">Faire une réservation</button>
-
-                <h3>Horaires d'ouvertures</h3>
-                <table>
-                  <tr *ngFor="let day of ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche']; let i = index">
-                    <td>{{ day }}</td>
-                    <td>{{ restaurant.horaires.getDay(i) }}</td>
-                  </tr>
-                </table>
-
-                </ul>
+          <div class="card-body">
+            <div class="card-body text-center">
+              <br /><br />
+              <p class="card-text">{{ restaurant.description }}</p>
             </div>
-        </div>        
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Adresse : {{ restaurant.adress }}</li>
+              <li class="list-group-item">Date de création : {{ restaurant.dateOfCreation }}</li>
+              <li class="list-group-item">Note : {{ restaurant.note }}/5</li>
+              <li class="list-group-item">Capacité : {{ restaurant.capacite }} places</li>
+              <button type="button" class="btn btn-info btn-sm" *ngIf="client" [disabled]="!client"
+                (click)="openReservationForm()">Faire une réservation</button>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      
+      <div class="row no-gutters" *ngIf="restaurant">
+        <div class="col-md-12">
+          <h3>Horaires d'ouvertures</h3>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Jour</th>
+                <th scope="col">Horaires</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let day of ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche']; let i = index">
+                <td>{{ day }}</td>
+                <td>{{ restaurant.horaires.getDay(i) }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
+      
+      <div class="row no-gutters" *ngIf="restaurant">
+        <div class="col-md-12">
+          <div class="card-body">
+            <h3 class="section-title">Critiques</h3>
+            <div *ngFor="let review of reviews" class="review-item">
+              <p class="comment">{{ review.comment }}</p>
+              <p class="rating">Évaluation: {{ review.rating }}/5</p>
+            </div>
+            <form (ngSubmit)="submitReview()" class="review-form">
+              <div class="form-group">
+                <label for="comment">Commentaire:</label>
+                <textarea id="comment" class="form-control" [(ngModel)]="newReview.comment" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="rating">Évaluation:</label>
+                <input type="number" id="rating" class="form-control" [(ngModel)]="newReview.rating" min="1" max="5" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
     </div>
-</div>
-</div>
+  </div>
+  
 
+
+  <br><br><br><br><br><br><br><br>

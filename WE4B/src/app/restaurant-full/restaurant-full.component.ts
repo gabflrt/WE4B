@@ -1,8 +1,7 @@
-// restaurant-full.component.ts
-
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RestaurantService } from '../restaurant.service';
+import { ReviewService } from '../review.service';
 import { Restaurant } from '../models/restaurant';
 import { Horaires } from '../models/horaires';
 import { ReservationFormComponent } from '../reservation-form/reservation-form.component';
@@ -19,18 +18,25 @@ export class RestaurantFullComponent implements OnInit {
   restaurant_id!: number;
   restaurant!: Restaurant;
   client: Client | null = null;
+  reviews: Array<any> = [];
+  newReview: any = {};
 
-
-  constructor(private activatedroute: ActivatedRoute, private service: RestaurantService, public dialog: MatDialog,private sessionService: SessionService) {
+  constructor(
+    private activatedroute: ActivatedRoute,
+    private restaurantService: RestaurantService,
+    @Inject(ReviewService) private reviewService: ReviewService,
+    public dialog: MatDialog,
+    private sessionService: SessionService
+  ) {
     this.restaurant_id = parseInt(this.activatedroute.snapshot.paramMap.get('id') || '0');
-    this.service.getRestaurantFromId(this.restaurant_id).subscribe((data) => {
+    this.restaurantService.getRestaurantFromId(this.restaurant_id).subscribe((data) => {
       this.restaurant = data;
 
-      // Map JSON horaires to Horaires class
+      
       if (this.restaurant && this.restaurant.horaires) {
         this.restaurant.horaires = this.mapJsonToHoraires(this.restaurant.horaires);
       } else {
-        // Provide default horaires if not present in the JSON data
+        
         this.restaurant.horaires = new Horaires();
       }
     });
@@ -69,5 +75,14 @@ export class RestaurantFullComponent implements OnInit {
       width: '500px',
       data: { restaurant: this.restaurant, client: this.client }
     });
+  }
+
+  submitReview() {
+    if (this.newReview.comment && this.newReview.rating) {
+      this.reviewService.submitReview(this.restaurant_id, this.newReview).subscribe((response) => {
+        this.restaurant = response;
+        this.newReview = {};
+      });
+    }
   }
 }

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,20 +17,19 @@ import { FormconnexionComponent } from './formconnexion/formconnexion.component'
 import { FooterComponent } from './footer/footer.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RestaurantService } from './restaurant.service';
+import { ReviewService } from './review.service'; // Corrected import path
 import { FilterPipe } from './filter.pipe';
 import { FilterDatePipe } from './filter-date.pipe';
 import { FilterCityPipe } from './filter-city.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReservationFormComponent } from './reservation-form/reservation-form.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { TriPipe } from './tri.pipe';
-import { AccountinfosComponent } from './accountinfos/accountinfos.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
-
-
+import { ReservationFormComponent } from './reservation-form/reservation-form.component';
+import { TriPipe } from './tri.pipe';
+import { AccountinfosComponent } from './accountinfos/accountinfos.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +41,6 @@ import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-mat
     NavbarComponent,
     AccountComponent,
     OrdersComponent,
-    NavbarComponent,
     FormcreacompteComponent,
     FormcrearestoComponent,
     MesRestosComponent,
@@ -55,7 +52,6 @@ import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-mat
     ReservationFormComponent,
     TriPipe,
     AccountinfosComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -71,9 +67,7 @@ import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-mat
     NgxMatDatetimePickerModule,
     NgxMatTimepickerModule,
   ],
-  providers: [RestaurantService, HttpClientModule, HttpClient],
+  providers: [RestaurantService, HttpClient, ReviewService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
