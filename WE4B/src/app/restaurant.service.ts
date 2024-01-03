@@ -13,17 +13,15 @@ export class RestaurantService {
   restaurant!: Restaurant;
   constructor(private http: HttpClient) { }
 
-  getRestaurants() : Observable<Restaurant[]> {
+  getRestaurants(): Observable<Restaurant[]> {
     return this.http.get<Restaurant[]>('http://localhost:3000/restaurants')
-    }
-    
-  getRestaurantFromId(id:number) : Observable<Restaurant> {
-    return this.http.get<Restaurant>('http://localhost:3000/restaurants/'+id);
   }
 
-  
+  getRestaurantFromId(id: number): Observable<Restaurant> {
+    return this.http.get<Restaurant>('http://localhost:3000/restaurants/' + id);
+  }
 
-
-
-
+  addRestaurant(restaurant: Restaurant): Observable<Restaurant> {
+    return this.http.post<Restaurant>('http://localhost:3000/restaurants', restaurant);
+  }
 }

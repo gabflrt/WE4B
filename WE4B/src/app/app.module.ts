@@ -27,7 +27,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { TriPipe } from './tri.pipe';
 import { AccountinfosComponent } from './accountinfos/accountinfos.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-material-components/datetime-picker';
 
@@ -55,7 +55,7 @@ import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-mat
     ReservationFormComponent,
     TriPipe,
     AccountinfosComponent,
-    
+
   ],
   imports: [
     BrowserModule,
