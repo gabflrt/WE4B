@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RestaurantService } from '../restaurant.service';
 import { Restaurant } from '../models/restaurant';
 import { Horaires } from '../models/horaires';
+import { SessionService } from '../session.service'
 
 @Component({
   selector: 'app-formcrearesto',
@@ -11,6 +12,7 @@ import { Horaires } from '../models/horaires';
 export class FormcrearestoComponent implements OnInit {
   restaurant = {
     id: 0,
+    id_gerant: 1,
     title: '',
     description: '',
     dateOfCreation: '',
@@ -27,9 +29,10 @@ export class FormcrearestoComponent implements OnInit {
   errorMessage: string | null = null;
   successMessage: string | null = null;
 
-  constructor(private restaurantService: RestaurantService) { }
+  constructor(private restaurantService: RestaurantService, private sessionService: SessionService) { }
 
   ngOnInit(): void {
+    this.restaurant.id_gerant = this.sessionService.getSessionId();
   }
 
   addRestaurant() {
@@ -37,7 +40,7 @@ export class FormcrearestoComponent implements OnInit {
     this.successMessage = null;
     console.log("dans fonction");
 
-    if (!this.restaurant.title || !this.restaurant.description || !this.restaurant.adress || !this.restaurant.city || !this.restaurant.img || !this.restaurant.horaires) {
+    if (!this.restaurant.title || !this.restaurant.description || !this.restaurant.adress || !this.restaurant.city || !this.restaurant.img) {
       this.errorMessage = 'Tous les champs doivent être remplis.';
       console.log("erreur champs");
     } else {
@@ -57,10 +60,16 @@ export class FormcrearestoComponent implements OnInit {
   }
 
   handleFileInput(event: Event) {
-    const file = (event.target as HTMLInputElement)?.files?.[0];
-    if (file) {
-      this.restaurant.img = URL.createObjectURL(file);
-    }
+    // Malheureusement trop lourd et stockage sur serveur impossible avec json-server
+    // const file = (event.target as HTMLInputElement)?.files?.[0];
+    // if (file) {
+    //   const reader = new FileReader();
+    //   reader.onloadend = () => {
+    //     this.restaurant.img = reader.result as string;
+    //   };
+    //   reader.readAsDataURL(file);
+    // }
+    this.restaurant.img = "assets/img/1.jpg";
   }
 
 }

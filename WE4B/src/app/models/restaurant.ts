@@ -3,6 +3,7 @@ import { Horaires } from "./horaires";
 export class Restaurant {
     constructor(
         public id: number,
+        public id_gerant: number,
         public title: string,
         public description: string,
         public dateOfCreation: string,
@@ -16,6 +17,7 @@ export class Restaurant {
         public horaires: Horaires = new Horaires(),
         public capacite: number,) {
         this.id = id;
+        this.id_gerant = id_gerant;
         this.description = description;
         this.title = title;
         this.dateOfCreation = dateOfCreation;

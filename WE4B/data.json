@@ -2,6 +2,7 @@
   "restaurants": [
     {
       "id": 1,
+      "id_gerant": 1,
       "title": "Auberge-fleurie",
       "description": "Cuisine Française, Européenne",
       "dateOfCreation": "2020-01-13",
@@ -23,6 +24,7 @@
     },
     {
       "id": 2,
+      "id_gerant": 1,
       "title": "Les Capucins",
       "description": "Cuisine Française, Européenne",
       "dateOfCreation": "2022-05-20",
@@ -44,6 +46,7 @@
     },
     {
       "id": 3,
+      "id_gerant": 1,
       "title": "Auberge la Gogoline",
       "description": "Cuisine Française, Internationale",
       "dateOfCreation": "1999-11-03",
@@ -65,6 +68,7 @@
     },
     {
       "id": 4,
+      "id_gerant": 1,
       "title": "Au Fil des Saisons",
       "description": "Cuisine Française, Européenne",
       "dateOfCreation": "2005-01-01",
@@ -86,6 +90,7 @@
     },
     {
       "id": 5,
+      "id_gerant": 1,
       "title": "Le Saint Martin",
       "description": "Cuisine Française, Européenne",
       "dateOfCreation": "2017-07-23",
@@ -107,6 +112,7 @@
     },
     {
       "id": 6,
+      "id_gerant": 1,
       "title": "Resto",
       "description": "un resto",
       "dateOfCreation": "",
@@ -121,63 +127,27 @@
       "capacite": 0
     },
     {
-      "id": 7,
-      "title": "Resto",
-      "description": "un resto",
+      "id": 12,
+      "id_gerant": 82,
+      "title": "Resto ",
+      "description": "ceci est un restaurant test avec une image par defaut",
       "dateOfCreation": "",
-      "adress": "quelque part",
+      "adress": "20 Rue Victor Hugo",
       "city": "Belfort",
-      "phone": "0783947755",
+      "phone": "07837",
       "note": 0,
-      "img": "blob:http://localhost:4200/b0cad842-87a1-417f-9940-449674ea7127",
+      "img": "assets/img/1.jpg",
       "likes": 0,
       "menu": "menu.fr",
-      "horaires": "12h-14h",
-      "capacite": 0
-    },
-    {
-      "id": 8,
-      "title": "Resto",
-      "description": "un resto",
-      "dateOfCreation": "",
-      "adress": "quelque part",
-      "city": "Belfort",
-      "phone": "0783947755",
-      "note": 0,
-      "img": "blob:http://localhost:4200/b0cad842-87a1-417f-9940-449674ea7127",
-      "likes": 0,
-      "menu": "menu.fr",
-      "horaires": "12h-14h",
-      "capacite": 0
-    },
-    {
-      "id": 9,
-      "title": "Resto",
-      "description": "un resto",
-      "dateOfCreation": "",
-      "adress": "quelque part",
-      "city": "Belfort",
-      "phone": "0783947755",
-      "note": 0,
-      "img": "blob:http://localhost:4200/b0cad842-87a1-417f-9940-449674ea7127",
-      "likes": 0,
-      "menu": "menu.fr",
-      "horaires": "12h-14h",
-      "capacite": 0
-    },
-    {
-      "id": 10,
-      "title": "resto",
-      "description": "un  resto",
-      "dateOfCreation": "",
-      "adress": "quelque part",
-      "city": "Belfort",
-      "phone": 0,
-      "note": 0,
-      "img": "blob:http://localhost:4200/8d95f8c2-782b-45be-84e8-046a92d9706b",
-      "likes": 0,
-      "menu": "menu.fr",
-      "horaires": "12h-14h",
+      "horaires": {
+        "lundi": "12h - 14h / 19h - 22h",
+        "mardi": "12h - 14h / 19h - 22h",
+        "mercredi": "12h - 14h / 19h - 22h",
+        "jeudi": "12h - 14h / 19h - 22h",
+        "vendredi": "12h - 14h / 19h - 22h",
+        "samedi": "12h - 14h / 19h - 22h",
+        "dimanche": "12h - 14h / 19h - 22h"
+      },
       "capacite": 0
     }
   ],

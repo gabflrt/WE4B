@@ -24,4 +24,12 @@ export class RestaurantService {
   addRestaurant(restaurant: Restaurant): Observable<Restaurant> {
     return this.http.post<Restaurant>('http://localhost:3000/restaurants', restaurant);
   }
+
+  deleteRestaurant(id: number): Observable<any> {
+    return this.http.delete('http://localhost:3000/restaurants/' + id);
+  }
+
+  updateRestaurant(id: number, restaurantData: Restaurant): Observable<Restaurant> {
+    return this.http.put<Restaurant>('http://localhost:3000/restaurants/' + id, restaurantData);
+  }
 }

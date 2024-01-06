@@ -30,6 +30,7 @@ import { NgxMatDatetimePickerModule, NgxMatTimepickerModule } from '@angular-mat
 import { ReservationFormComponent } from './reservation-form/reservation-form.component';
 import { TriPipe } from './tri.pipe';
 import { AccountinfosComponent } from './accountinfos/accountinfos.component';
+import { RestosgerantComponent } from './restosgerant/restosgerant.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { AccountinfosComponent } from './accountinfos/accountinfos.component';
     ReservationFormComponent,
     TriPipe,
     AccountinfosComponent,
+    RestosgerantComponent,
   ],
   imports: [
     BrowserModule,

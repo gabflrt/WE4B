@@ -24,4 +24,8 @@ export class SessionService {
   isAuthenticated(): boolean {
     return this._client !== null || this.client !== null;
   }
+  getSessionId(): number | 1 {
+    const client = this.client;
+    return client ? client.id : 1;
+  }
 }

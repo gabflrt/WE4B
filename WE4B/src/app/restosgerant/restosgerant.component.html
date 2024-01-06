@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="text-center my-5">Liste de vos restaurants</h1>
+
+    <div *ngFor="let restaurant of restaurants" class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img [src]="restaurant.img" alt="{{ restaurant.title }}" class="img-fluid rounded-start">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 class="card-title">{{ restaurant.title }}</h2>
+                    <p class="card-text">{{ restaurant.description }}</p>
+                    <p class="card-text">Adresse : {{ restaurant.adress }}, {{ restaurant.city }}</p>
+                    <p class="card-text">Note : {{ restaurant.note }}</p>
+                    <p class="card-text">Capacité : {{ restaurant.capacite }}</p>
+                    <div *ngFor="let horaire of restaurant.horaires | keyvalue" class="card-text">
+                        <p>{{ horaire.key }} : {{ horaire.value }}</p>
+                    </div>
+                    <button (click)="deleteRestaurant(restaurant.id)" class="btn btn-danger">Supprimer</button>
+                    <button (click)="updateRestaurant(restaurant.id, restaurant)"
+                        class="btn btn-primary">Modifier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
