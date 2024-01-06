@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RestaurantService } from '../restaurant.service';
 import { Restaurant } from '../models/restaurant';
 import { SessionService } from '../session.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-restosgerant',
@@ -10,8 +11,9 @@ import { SessionService } from '../session.service';
 })
 export class RestosgerantComponent {
   restaurants: Restaurant[] = [];
+  restaurant!: Restaurant;
 
-  constructor(private restaurantService: RestaurantService, private sessionService: SessionService) { }
+  constructor(private restaurantService: RestaurantService, private sessionService: SessionService, private router: Router) { }
 
   ngOnInit() {
     const gerantId = this.sessionService.getSessionId();
@@ -26,15 +28,11 @@ export class RestosgerantComponent {
     });
   }
 
-  updateRestaurant(id: number, restaurantData: Restaurant) {
-    this.restaurantService.updateRestaurant(id, restaurantData).subscribe(updatedRestaurant => {
-      this.restaurants = this.restaurants.map(restaurant => {
-        if (restaurant.id === updatedRestaurant.id) {
-          return updatedRestaurant;
-        }
-        return restaurant;
-      });
-    });
+  openUpdateForm(restaurantData: Restaurant) {
+    // Copiez les détails du restaurant dans le restaurant de ce composant
+    this.restaurant = { ...restaurantData };
+    // Ou si vous utilisez le routage :
+    this.router.navigate(['/update-restaurant', this.restaurant.id]);
   }
 }
 

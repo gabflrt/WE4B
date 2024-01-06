@@ -31,6 +31,7 @@ import { ReservationFormComponent } from './reservation-form/reservation-form.co
 import { TriPipe } from './tri.pipe';
 import { AccountinfosComponent } from './accountinfos/accountinfos.component';
 import { RestosgerantComponent } from './restosgerant/restosgerant.component';
+import { FormupdatestoComponent } from './formupdatesto/formupdatesto.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { RestosgerantComponent } from './restosgerant/restosgerant.component';
     TriPipe,
     AccountinfosComponent,
     RestosgerantComponent,
+    FormupdatestoComponent,
   ],
   imports: [
     BrowserModule,

@@ -113,11 +113,11 @@
     {
       "id": 12,
       "id_gerant": 82,
-      "title": "Resto ",
+      "title": "Resto perso",
       "description": "ceci est un restaurant test avec une image par defaut",
       "dateOfCreation": "",
       "adress": "20 Rue Victor Hugo",
-      "city": "Belfort",
+      "city": "Mulhouse",
       "phone": "07837",
       "note": 0,
       "img": "assets/img/1.jpg",

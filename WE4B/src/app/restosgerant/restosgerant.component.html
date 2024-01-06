@@ -10,6 +10,7 @@
                 <div class="card-body">
                     <h2 class="card-title">{{ restaurant.title }}</h2>
                     <p class="card-text">{{ restaurant.description }}</p>
+                    <p class="card-text">Téléphone : {{ restaurant.phone }}</p>
                     <p class="card-text">Adresse : {{ restaurant.adress }}, {{ restaurant.city }}</p>
                     <p class="card-text">Note : {{ restaurant.note }}</p>
                     <p class="card-text">Capacité : {{ restaurant.capacite }}</p>
@@ -17,8 +18,7 @@
                         <p>{{ horaire.key }} : {{ horaire.value }}</p>
                     </div>
                     <button (click)="deleteRestaurant(restaurant.id)" class="btn btn-danger">Supprimer</button>
-                    <button (click)="updateRestaurant(restaurant.id, restaurant)"
-                        class="btn btn-primary">Modifier</button>
+                    <button (click)="openUpdateForm(restaurant)" class="btn btn-primary">Modifier</button>
                 </div>
             </div>
         </div>

@@ -8,6 +8,7 @@ import { AccountComponent } from './account/account.component';
 import { OrdersComponent } from './orders/orders.component';
 import { MesRestosComponent } from './mes-restos/mes-restos.component';
 import { AccountinfosComponent } from './accountinfos/accountinfos.component';
+import { FormupdatestoComponent } from './formupdatesto/formupdatesto.component';
 
 const routes: Routes = [
   { path: '', component: RestaurantListComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'orders', component: OrdersComponent },
   { path: 'restaurant/:id', component: RestaurantFullComponent },
   { path: 'restos', component: MesRestosComponent },
-  { path: 'accountinfos', component: AccountinfosComponent }
+  { path: 'accountinfos', component: AccountinfosComponent },
+  { path: 'update-restaurant/:id', component: FormupdatestoComponent },
 ];
 
 @NgModule({

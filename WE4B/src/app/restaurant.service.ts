@@ -29,7 +29,7 @@ export class RestaurantService {
     return this.http.delete('http://localhost:3000/restaurants/' + id);
   }
 
-  updateRestaurant(id: number, restaurantData: Restaurant): Observable<Restaurant> {
-    return this.http.put<Restaurant>('http://localhost:3000/restaurants/' + id, restaurantData);
+  updateRestaurant(restaurantData: Restaurant): Observable<Restaurant> {
+    return this.http.put<Restaurant>('http://localhost:3000/restaurants/' + restaurantData.id, restaurantData);
   }
 }
