@@ -111,22 +111,6 @@
       }
     },
     {
-      "id": 6,
-      "id_gerant": 1,
-      "title": "Resto",
-      "description": "un resto",
-      "dateOfCreation": "",
-      "adress": "quelque part",
-      "city": "Belfort",
-      "phone": "0783947755",
-      "note": 0,
-      "img": "blob:http://localhost:4200/b0cad842-87a1-417f-9940-449674ea7127",
-      "likes": 0,
-      "menu": "menu.fr",
-      "horaires": "12h-14h",
-      "capacite": 0
-    },
-    {
       "id": 12,
       "id_gerant": 82,
       "title": "Resto ",
