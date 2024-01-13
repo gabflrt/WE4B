@@ -37,6 +37,18 @@
                 [(ngModel)]="restaurant.phone" name="phone">
         </div>
         <div class="form-group">
+            <label for="inputDateOfCreation">Date de création</label>
+            <input type="date" class="form-control" id="inputDateOfCreation" placeholder="Date de création"
+                [(ngModel)]="restaurant.dateOfCreation" name="date">
+        </div>
+
+        <div class = "form-group">
+            <label for="inputCapacity">Capacité</label>
+            <input type="number" class="form-control" id="inputCapacity" placeholder="Capacité"
+                [(ngModel)]="restaurant.capacite" name="capacity">
+        </div>
+        
+        <div class="form-group">
             <label for="inputHours">Horaires d'ouverture</label>
             <input type="text" class="form-control" id="inputHours" placeholder="Horaires d'ouverture"
                 [(ngModel)]="restaurant.horaires" name="hours">

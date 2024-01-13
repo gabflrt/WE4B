@@ -29,10 +29,12 @@ export class RestaurantFullComponent implements OnInit {
     private sessionService: SessionService
   ) {
     this.restaurant_id = parseInt(this.activatedroute.snapshot.paramMap.get('id') || '0');
-    this.restaurantService.getRestaurantFromId(this.restaurant_id).subscribe((data) => {
-      this.restaurant = data;
+    console.log("this restaurant id : ",this.restaurant_id)
+    console.log("Type of restaurant_id:", typeof this.restaurant_id);
 
-      
+    this.restaurantService.getRestaurantFromId(this.restaurant_id).subscribe((data) => {
+
+      this.restaurant = data;
       if (this.restaurant && this.restaurant.horaires) {
         this.restaurant.horaires = this.mapJsonToHoraires(this.restaurant.horaires);
       } else {

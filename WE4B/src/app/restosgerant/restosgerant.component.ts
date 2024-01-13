@@ -18,7 +18,8 @@ export class RestosgerantComponent {
   ngOnInit() {
     const gerantId = this.sessionService.getSessionId();
     this.restaurantService.getRestaurants().subscribe(data => {
-      this.restaurants = data.filter(restaurant => restaurant.id_gerant === gerantId);
+      this.restaurants = data.filter(restaurant =>  restaurant.id_gerant == gerantId);
+
     });
   }
 

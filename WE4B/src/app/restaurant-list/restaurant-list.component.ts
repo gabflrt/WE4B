@@ -25,7 +25,7 @@ getNumberOfStars(note: number): number {
 }
 
 minDate: String = "1900-01-01";
-maxDate: String = "2024-01-01";
+maxDate: String = "2024-01-14";
 
 villeRecherchee: string = '';
 
@@ -67,7 +67,8 @@ triParNote() {
 }
 
 ngOnInit() {
-   };
+
+}
 }
 
 

@@ -18,8 +18,9 @@ export class RestaurantService {
   }
 
   getRestaurantFromId(id: number): Observable<Restaurant> {
-    return this.http.get<Restaurant>('http://localhost:3000/restaurants/' + id);
+    return this.http.get<Restaurant>(`http://localhost:3000/restaurants/` +id);
   }
+  
 
   addRestaurant(restaurant: Restaurant): Observable<Restaurant> {
     return this.http.post<Restaurant>('http://localhost:3000/restaurants', restaurant);
@@ -32,4 +33,13 @@ export class RestaurantService {
   updateRestaurant(restaurantData: Restaurant): Observable<Restaurant> {
     return this.http.put<Restaurant>('http://localhost:3000/restaurants/' + restaurantData.id, restaurantData);
   }
+
+  getMaxId(): Observable<number> {
+    return this.getRestaurants().pipe(
+      map(restaurants => restaurants.map(restaurant => restaurant.id)),
+      map(ids => Math.max(...ids))
+    );
+  }
+  
+
 }

@@ -3,6 +3,7 @@ import { RestaurantService } from '../restaurant.service';
 import { Restaurant } from '../models/restaurant';
 import { Horaires } from '../models/horaires';
 import { SessionService } from '../session.service'
+import { Observable, map } from 'rxjs';
 
 @Component({
   selector: 'app-formcrearesto',
@@ -35,17 +36,25 @@ export class FormcrearestoComponent implements OnInit {
     this.restaurant.id_gerant = this.sessionService.getSessionId();
   }
 
+
   addRestaurant() {
     this.errorMessage = null;
     this.successMessage = null;
-    console.log("dans fonction");
+    const { id, ...restaurantData } = this.restaurant;
 
     if (!this.restaurant.title || !this.restaurant.description || !this.restaurant.adress || !this.restaurant.city || !this.restaurant.img) {
       this.errorMessage = 'Tous les champs doivent être remplis.';
       console.log("erreur champs");
     } else {
+
+
+  // Get the maximum ID and add the new restaurant
+  this.restaurantService.getMaxId().subscribe(maxId => {
+    this.restaurant.id = (maxId + 1);
       this.restaurantService.addRestaurant(this.restaurant).subscribe(response => {
         if (response) {
+
+
           console.log('Restaurant creation succeeded');
           this.successMessage = 'Le restaurant a bien été enregistré.';
         } else {
@@ -56,6 +65,7 @@ export class FormcrearestoComponent implements OnInit {
         console.log('Restaurant creation failed');
         this.errorMessage = 'L\'enregistrement du restaurant a échoué. Veuillez réessayer.';
       });
+    });
     }
   }
 
