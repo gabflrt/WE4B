@@ -1,17 +1,44 @@
 .restaurant-image {
-    width: 200px; 
-    height: 150px; 
-    object-fit: cover; 
-    border-radius: 5px;
-  }
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
 
-  .card {
-    width: 18rem; 
-    height: 450px;
-    background-color: ghostwhite ;
-     
-  }
-  
-  li{
-    background-color:ghostwhite;
-  }
+.card {
+  width: 18rem;
+  height: 450px;
+  background-color: #4d4c4c; /* Dark background color */
+  color: white; /* Light text color */
+}
+
+.card:hover {
+  background-color: #706f6f; /* Dark background color */
+}
+
+li {
+  background-color: #4d4c4c; /* Dark background color */
+  color: white; /* Light text color */
+}
+
+
+
+.li:hover {
+  background-color: #706f6f; /* Dark background color */
+}
+
+/* Style the button */
+.btn.btn-info {
+  background-color: #007BFF; /* Dark blue background color */
+  color: white; /* Light text color */
+}
+
+/* Style the star rating icons */
+.star-rating {
+  color: #FFD700; /* Gold color for filled stars */
+}
+
+/* Style the filled stars */
+.star-rating .filled {
+  color: #FFD700; /* Gold color for filled stars */
+}

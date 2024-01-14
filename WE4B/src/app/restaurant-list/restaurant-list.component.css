@@ -1,44 +1,56 @@
+/* Dark Theme Styles */
+
+/* Filter Section */
 .filter-section {
-    background-color: #ffffff;
+    background-color: #252525; /* Dark background for filter section */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
     margin-bottom: 20px;
+    color: #fff; /* Light color for text */
 }
 
+/* Filter Group */
 .filter-group {
     margin-bottom: 20px;
-
 }
 
+/* Label */
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: #ddd; /* Lighter color for labels */
 }
 
+/* Input Group */
 .input-group {
     display: flex;
     gap: 10px;
 }
 
+/* Input and Select Elements */
 input, select {
     padding: 8px;
     box-sizing: border-box;
-    border: 1px solid #ddd;
+    border: 1px solid #555; /* Darker border for inputs */
     border-radius: 8px;
-    border-color:grey;
-    background-color: ghostwhite;
+    background-color: #333; /* Dark background for inputs */
+    color: #ddd; /* Light color for input text */
 }
 
+/* Select Element */
 select {
     cursor: pointer;
 }
 
+/* Container */
 .container {
-    background-color: whitesmoke;
+    background-color: #303030; /* Dark background for the container */
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+    color: #fff; /* Light color for text */
 }
 
+/* Additional adjustments for hover effects, focus states, etc., can be added as needed. */
