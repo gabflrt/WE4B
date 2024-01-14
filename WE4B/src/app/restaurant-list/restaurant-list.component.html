@@ -5,16 +5,16 @@
             
             <br><br><h2>Filtres</h2>   
             
-            <p>Notes :</p>
+            <h6>Notes :</h6>
             <input type="number" [(ngModel)]="minNote" placeholder="Note minimale" min="0" max="5" (change)="validateMinMaxValues()" (type)="validateMinMaxValues()">
             <input type="number" [(ngModel)]="maxNote" placeholder="Note maximale" min="0" max="5" (change)="validateMinMaxValues()" (type)="validateMinMaxValues()">
             <br><br>
 
-            <p>Ville :</p>
+            <h6>Ville :</h6>
             <input type="text" [(ngModel)]="villeRecherchee" placeholder="Rechercher par ville">
             <br><br>
 
-            <p>Date de création :</p>
+            <h6>Date de création :</h6>
             <input type="date" [(ngModel)]="minDate" placeholder="Date minimale" (change)="validateMinMaxDate()" (type)="validateMinMaxDate()">
             <input type="date" [(ngModel)]="maxDate" placeholder="Date maximale" (change)="validateMinMaxDate()" (type)="validateMinMaxDate()">
         </div>

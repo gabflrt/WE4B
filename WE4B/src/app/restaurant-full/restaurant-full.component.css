@@ -1,14 +1,16 @@
 .restaurant-image {
-    width: 300px; /* Set a fixed width */
-    height: 225px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image covers the specified dimensions */
-    border-radius: 5px; /* Optionally add rounded corners */
+    width: 300px; 
+    height: 225px; 
+    object-fit: cover; 
+    border-radius: 5px; 
   }
 
   .card {
-    width: 60rem; /* Set a fixed width for the card */
-    height: 400px; /* Set a fixed height for the card */
-    /* Add any additional styling as needed */
+    width: 60rem; 
+    height: 400px; 
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke;
+
   }
 
   
@@ -17,6 +19,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+   
 }
 
 .section-title {
@@ -55,6 +58,7 @@ textarea, input {
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    
 }
 
 .submit-button {
@@ -69,6 +73,6 @@ textarea, input {
     cursor: pointer;
 }
 
-
-
-
+li{
+    background-color: whitesmoke;
+}
