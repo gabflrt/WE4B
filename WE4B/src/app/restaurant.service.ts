@@ -18,7 +18,10 @@ export class RestaurantService {
   }
 
   getRestaurantFromId(id: number): Observable<Restaurant> {
-    return this.http.get<Restaurant>(`http://localhost:3000/restaurants/` +id);
+    return this.http.get<Restaurant[]>('http://localhost:3000/restaurants?id=' + id)
+      .pipe(
+        map(restaurants => restaurants[0])
+      );
   }
 
   addRestaurant(restaurant: Restaurant): Observable<Restaurant> {
@@ -26,7 +29,10 @@ export class RestaurantService {
   }
 
   deleteRestaurant(id: number): Observable<any> {
-    return this.http.delete('http://localhost:3000/restaurants/' + id);
+    return this.http.get<Restaurant[]>('http://localhost:3000/restaurants?id=' + id)
+      .pipe(
+        map(restaurants => restaurants[0])
+      );
   }
 
   updateRestaurant(restaurantData: Restaurant): Observable<Restaurant> {

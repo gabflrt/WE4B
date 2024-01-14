@@ -1,6 +1,7 @@
 import { Horaires } from "./horaires";
 
 export class Restaurant {
+
     constructor(
         public id: number,
         public id_gerant: number,
